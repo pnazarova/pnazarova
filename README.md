@@ -1,20 +1,28 @@
 # Gregory La Blanc — Personal Website
 
-Personal profile and landing page for Gregory La Blanc — Distinguished Teaching Fellow at UC Berkeley Haas, Lecturer at Stanford GSB, Faculty Director at the Berkeley Fintech Institute, and Host of the unSILOed Podcast.
+Personal site for Gregory La Blanc — Distinguished Teaching Fellow at UC Berkeley Haas, Lecturer at Stanford GSB, founder and Faculty Director of the Berkeley Fintech Institute, and host of the unSILOed Podcast.
 
-## Sections
+## Running it
 
-- **Hero** — Name, title, positioning quote, and call-to-action buttons
-- **About** — Bio, key stats, and interdisciplinary credentials
-- **Expertise** — AI Strategy, Fintech, Data-Driven Decision Making, Innovation, Leadership, Education
-- **Speaking & Keynotes** — Topics, select engagements, and booking CTA
-- **Executive Education** — ETM Week flagship program, AI Leadership Accelerator, Mastercard Digital Safari, custom programs
-- **unSILOed Podcast** — 619+ episodes, topic breakdown, notable guests, listener reviews
-- **For Governments & Organizations** — AMENA Center programs, global consulting experience
-- **Credentials** — Education, awards, institutional roles
-- **Media & Appearances** — Press, podcast guest spots, video talks
-- **Contact** — Speaking, executive education, consulting inquiries, and social links
+No build step, no dependencies. Either:
 
-## Tech Stack
+- Open `index.html` directly in a browser, or
+- Serve the folder: `python3 -m http.server 8000` and visit `http://localhost:8000`
 
-Static HTML, CSS, and vanilla JavaScript. No build tools required — open `index.html` in a browser.
+To publish with GitHub Pages: repo **Settings → Pages → Deploy from a branch → main / root**. The site will be live at `https://pnazarova.github.io/pnazarova/`.
+
+## Design
+
+An editorial design system built around Greg's Berkeley identity:
+
+- **Palette** — warm paper background, Berkeley navy, California gold
+- **Type** — [Fraunces](https://fonts.google.com/specimen/Fraunces) for display, Inter for body, Spline Sans Mono for labels
+- **Motion** — scroll-triggered reveals, animated stat counters, podcast topic bars, and an institutions marquee; all disabled under `prefers-reduced-motion`
+
+## Structure
+
+| File | Purpose |
+| --- | --- |
+| `index.html` | All content, one page: hero, about, expertise, speaking, executive education, podcast, global advisory, credentials, media, contact |
+| `styles.css` | Full design system (variables, components, responsive breakpoints at 1024px and 720px) |
+| `script.js` | Nav behavior, mobile menu, reveal/counter/bar animations, active-section highlighting |
