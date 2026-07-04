@@ -838,6 +838,47 @@ a { color: inherit; text-decoration: none; }
 
 .form-note.form-note-ok { color: var(--gold-bright); font-weight: 600; }
 
+.form-result {
+    margin-top: 1.75rem;
+    border-top: 1px solid rgba(233, 182, 57, 0.3);
+    padding-top: 1.75rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.form-rec {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--gold-bright);
+}
+
+.form-result textarea {
+    font-family: var(--font-body);
+    font-size: 0.925rem;
+    color: var(--ink);
+    background: var(--paper);
+    border: 2px solid transparent;
+    border-radius: 14px 5px 16px 6px / 6px 16px 5px 14px;
+    padding: 0.9rem 1rem;
+    width: 100%;
+    resize: vertical;
+}
+
+.form-result-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+}
+
+.chooser .btn-ghost {
+    color: #fff;
+    border-color: var(--gold-bright);
+    box-shadow: 3px 3px 0 rgba(233, 182, 57, 0.35);
+}
+
+.chooser .btn-ghost:hover { background: rgba(233, 182, 57, 0.2); }
+
 /* --------------------------------------------------------------------------
    Podcast
    -------------------------------------------------------------------------- */
