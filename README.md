@@ -1,6 +1,6 @@
 # Gregory La Blanc — Personal Website
 
-Personal site for Gregory La Blanc — Distinguished Teaching Fellow at UC Berkeley Haas, Lecturer at Stanford GSB, founder and Faculty Director of the Berkeley Fintech Institute, and host of the unSILOed Podcast.
+Personal site for Gregory La Blanc — Faculty Director of Professional Education at UC Berkeley College of Engineering, Distinguished Teaching Fellow at Berkeley Haas, and host of the unSILOed Podcast.
 
 ## Running it
 
