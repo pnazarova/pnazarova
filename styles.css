@@ -422,41 +422,34 @@ a { color: inherit; text-decoration: none; }
     margin-top: 2.75rem;
 }
 
-/* Marquee */
+/* Institutions strip */
 
-.marquee {
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
-    overflow: hidden;
-    padding: 1.1rem 0;
-    background: rgba(255, 255, 255, 0.35);
-}
-
-.marquee-track {
+.inst-strip {
+    width: min(var(--container), 100% - 3rem);
+    margin-inline: auto;
     display: flex;
     align-items: center;
-    gap: 2.5rem;
-    width: max-content;
-    animation: marquee 36s linear infinite;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem 2.5rem;
+    padding: 1.5rem 0;
 }
 
-.marquee-track span {
-    font-family: var(--font-mono);
-    font-size: 1.35rem;
-    font-weight: 500;
-    color: var(--ink-soft);
-    white-space: nowrap;
+.hero .inst-strip {
+    border-top: 1px solid var(--line);
 }
 
-.marquee-track i {
-    font-style: normal;
-    font-size: 0.5rem;
-    color: var(--gold);
+.inst-strip img {
+    height: 2.1rem;
+    width: auto;
+    max-width: 11rem;
+    object-fit: contain;
+    filter: grayscale(1);
+    opacity: 0.7;
+    transition: filter 0.3s, opacity 0.3s;
 }
 
-@keyframes marquee {
-    to { transform: translateX(-50%); }
-}
+.inst-strip img:hover { filter: none; opacity: 1; }
 
 /* --------------------------------------------------------------------------
    Sections
@@ -1324,7 +1317,6 @@ a { color: inherit; text-decoration: none; }
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     [data-reveal] { opacity: 1; transform: none; transition: none; }
-    .marquee-track { animation: none; }
     .bar-fill { transition: none; }
 }
 
