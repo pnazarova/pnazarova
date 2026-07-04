@@ -690,100 +690,153 @@ a { color: inherit; text-decoration: none; }
 .engagement-list .talk { color: var(--ink-soft); font-style: italic; font-family: var(--font-display); font-size: 1.02rem; }
 
 /* --------------------------------------------------------------------------
-   Executive education
+   Offerings
    -------------------------------------------------------------------------- */
 
-.featured-program {
+.offer-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
-    gap: clamp(2rem, 4vw, 3.5rem);
-    background: var(--navy-deep);
-    color: #ece9df;
-    border-radius: var(--sketch);
-    box-shadow: 6px 6px 0 rgba(233, 182, 57, 0.55);
-    padding: clamp(2rem, 4.5vw, 3.5rem);
-    margin-bottom: 1.5rem;
-}
-
-.badge {
-    display: inline-block;
-    font-family: var(--font-display);
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--navy-deep);
-    background: var(--gold-bright);
-    border-radius: 999px;
-    padding: 0.35rem 0.9rem;
-    margin-bottom: 1.4rem;
-}
-
-.featured-program h3 {
-    font-family: var(--font-display);
-    font-size: clamp(1.7rem, 3vw, 2.3rem);
-    font-weight: 450;
-    line-height: 1.15;
-    color: #fff;
-}
-
-.featured-sub {
-    font-family: var(--font-display);
-    font-style: italic;
-    font-size: 1.15rem;
-    color: var(--gold-bright);
-    margin: 0.9rem 0 1.1rem;
-}
-
-.featured-program-main > p:last-child { color: #b9c5d1; font-size: 0.975rem; }
-
-.featured-program-facts {
-    display: grid;
-    gap: 1.1rem;
-    align-content: center;
-    border-left: 1px solid rgba(255, 255, 255, 0.18);
-    padding-left: clamp(1.5rem, 3vw, 2.5rem);
-}
-
-.featured-program-facts dt {
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 0.7rem;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: #8fa2b5;
-}
-
-.featured-program-facts dd { font-size: 0.95rem; color: #e8ecf1; margin-top: 0.2rem; }
-
-.programs-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr;
     gap: 1.25rem;
 }
 
-.program-card {
+.offer-card {
     background: var(--paper);
     border: 1.5px solid var(--line-strong);
     border-radius: var(--sketch);
-    padding: 1.75rem 1.6rem;
+    padding: 1.9rem 1.7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
     transition: transform 0.3s var(--ease), border-color 0.3s, box-shadow 0.3s var(--ease);
 }
 
-.program-card:hover {
-    transform: translateY(-4px) rotate(0.4deg);
+.offer-card:hover {
+    transform: translateY(-4px) rotate(-0.3deg);
     border-color: var(--ink);
     box-shadow: 5px 5px 0 rgba(233, 182, 57, 0.55);
 }
 
-.program-card h3 {
+.offer-wide { grid-column: 1 / -1; }
+
+.offer-meta {
     font-family: var(--font-display);
-    font-size: 1.25rem;
-    font-weight: 500;
-    margin-bottom: 0.55rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
 }
 
-.program-card p { font-size: 0.95rem; color: var(--ink-soft); }
+.offer-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.offer-card > p { font-size: 0.975rem; color: var(--ink-soft); }
+
+.offer-editions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    width: 100%;
+    margin: 0.25rem 0;
+}
+
+.offer-edition {
+    border-left: 3px solid var(--gold-bright);
+    padding-left: 1.1rem;
+}
+
+.offer-edition h4 {
+    font-family: var(--font-display);
+    font-size: 1.02rem;
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+}
+
+.offer-edition p { font-size: 0.925rem; color: var(--ink-soft); }
+
+.offer-best { font-size: 0.875rem; color: var(--ink-soft); }
+.offer-best strong { color: var(--ink); }
+
+.offer-card .btn { margin-top: auto; }
+
+/* Chooser form */
+
+.chooser {
+    margin-top: clamp(2.5rem, 5vw, 4rem);
+    background: var(--navy-deep);
+    color: #ece9df;
+    border-radius: var(--sketch);
+    padding: clamp(2rem, 4.5vw, 3rem);
+    box-shadow: 6px 6px 0 rgba(233, 182, 57, 0.55);
+}
+
+.chooser-head h3 {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 2.6vw, 2rem);
+    font-weight: 600;
+    color: #fff;
+}
+
+.chooser-head p { color: #aebad3; margin: 0.5rem 0 1.75rem; max-width: 56ch; }
+
+.format-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.1rem 1.5rem;
+}
+
+.format-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold-bright);
+}
+
+.format-form input,
+.format-form select,
+.format-form textarea {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--ink);
+    background: var(--paper);
+    border: 2px solid transparent;
+    border-radius: 14px 5px 16px 6px / 6px 16px 5px 14px;
+    padding: 0.65rem 0.9rem;
+    width: 100%;
+}
+
+.format-form input:focus,
+.format-form select:focus,
+.format-form textarea:focus {
+    outline: none;
+    border-color: var(--gold-bright);
+}
+
+.format-form textarea { resize: vertical; }
+
+.form-full { grid-column: 1 / -1; }
+
+.form-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+.form-note { font-size: 0.85rem; color: #aebad3; max-width: 46ch; text-transform: none; letter-spacing: 0; font-family: var(--font-body); font-weight: 400; }
+
+.form-note.form-note-ok { color: var(--gold-bright); font-weight: 600; }
 
 /* --------------------------------------------------------------------------
    Podcast
@@ -1344,26 +1397,20 @@ a { color: inherit; text-decoration: none; }
 
     .hero-grid,
     .video-grid,
+    .offer-grid,
+    .offer-editions,
+    .format-form,
     .about-grid,
     .topics-grid,
     .two-col-cards,
     .cred-grid,
-    .podcast-grid,
-    .featured-program { grid-template-columns: 1fr; }
+    .podcast-grid { grid-template-columns: 1fr; }
 
     .expertise-grid,
     .programs-grid,
     .reviews-grid,
     .contact-grid,
     .media-grid { grid-template-columns: 1fr; }
-
-    .featured-program-facts {
-        border-left: 0;
-        border-top: 1px solid rgba(255, 255, 255, 0.18);
-        padding-left: 0;
-        padding-top: 1.5rem;
-        grid-template-columns: 1fr 1fr;
-    }
 
     .engagement-list li { grid-template-columns: 1fr; gap: 0.15rem; }
 

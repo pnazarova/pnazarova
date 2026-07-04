@@ -1,6 +1,6 @@
-# Gregory La Blanc — Personal Website
+# Gregory La Blanc : Personal Website
 
-Personal site for Gregory La Blanc — Faculty Director of Professional Education at UC Berkeley College of Engineering, Distinguished Teaching Fellow at Berkeley Haas, and host of the unSILOed Podcast.
+Personal site for Gregory La Blanc: Faculty Director of Professional Education at UC Berkeley College of Engineering, Distinguished Teaching Fellow at Berkeley Haas, and host of the unSILOed Podcast.
 
 ## Running it
 
@@ -15,9 +15,9 @@ To publish with GitHub Pages: repo **Settings → Pages → Deploy from a branch
 
 An editorial design system built around Greg's Berkeley identity:
 
-- **Palette** — warm paper background, Berkeley navy, California gold
-- **Type** — [Fraunces](https://fonts.google.com/specimen/Fraunces) for display, Inter for body, Spline Sans Mono for labels
-- **Motion** — scroll-triggered reveals, animated stat counters, podcast topic bars, and an institutions marquee; all disabled under `prefers-reduced-motion`
+- **Palette**: warm paper background, Berkeley navy, California gold
+- **Type**: [Fraunces](https://fonts.google.com/specimen/Fraunces) for display, Inter for body, Spline Sans Mono for labels
+- **Motion**: scroll-triggered reveals, animated stat counters, podcast topic bars, and an institutions marquee; all disabled under `prefers-reduced-motion`
 
 ## Structure
 

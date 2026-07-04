@@ -154,6 +154,50 @@ document.querySelectorAll('.video-card[data-video]').forEach((card) => {
     }, { once: true });
 });
 
+// Format chooser: recommend an offering and open a pre-filled email to Greg
+const formatForm = document.getElementById('format-form');
+if (formatForm) {
+    formatForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const f = new FormData(formatForm);
+        const v = (k) => (f.get(k) || '').toString().trim();
+        const note = document.getElementById('form-note');
+        if (!v('name') || !v('email')) {
+            note.textContent = 'Please add your name and email so Greg can reply.';
+            note.classList.remove('form-note-ok');
+            return;
+        }
+        const time = v('time'), where = v('where'), audience = v('audience');
+        let rec = 'Greg will suggest the right format';
+        if (time.startsWith('A talk')) {
+            rec = audience === 'Conference audience' ? 'Keynote or Fireside Chat' : 'Keynote, or a moderated session';
+        } else if (time === 'One day') {
+            rec = 'Strategy Sprint';
+        } else if (time === 'One week') {
+            if (where === 'Berkeley campus') rec = 'Executive Education Week, Berkeley Edition';
+            else if (where === 'Silicon Valley') rec = 'Silicon Valley Immersion';
+            else rec = 'Executive Education Week, Custom Edition';
+        }
+        const lines = [
+            `Name: ${v('name')}`,
+            `Email: ${v('email')}`,
+            `Organization & role: ${v('org')}`,
+            `Phone / WhatsApp: ${v('phone')}`,
+            `Time available: ${time}`,
+            `Location: ${where}`,
+            `Audience: ${audience} (approx. ${v('size') || '?'} people)`,
+            `Timeframe: ${v('when')}`,
+            `Desired outcome: ${v('outcome')}`,
+            '',
+            `Suggested format from the site: ${rec}`
+        ];
+        const subject = `Engagement inquiry from ${v('name')}${v('org') ? ' (' + v('org') + ')' : ''}`;
+        note.textContent = `Suggested format: ${rec}. Your email app should open now; if it doesn't, write to glablanc@gmail.com.`;
+        note.classList.add('form-note-ok');
+        window.location.href = `mailto:glablanc@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join('\n'))}`;
+    });
+}
+
 // Footer year
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
