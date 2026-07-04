@@ -3,616 +3,664 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gregory La Blanc — Berkeley | Stanford | HEC Paris</title>
-    <meta name="description" content="Distinguished Teaching Fellow at UC Berkeley Haas, Lecturer at Stanford GSB, Faculty Director at Berkeley Fintech Institute, and Host of the unSILOed Podcast.">
-    <link rel="stylesheet" href="styles.css">
+    <title>Gregory La Blanc — AI Strategy & Transformation | Berkeley · Stanford · HEC Paris</title>
+    <meta name="description" content="Gregory La Blanc helps executives guide their organizations through disruption. Faculty Director of Professional Education at UC Berkeley College of Engineering, Distinguished Teaching Fellow at Berkeley Haas, host of the unSILOed podcast.">
+    <meta property="og:title" content="Gregory La Blanc — AI Strategy & Transformation">
+    <meta property="og:description" content="Turning AI disruption into organizational advantage. Berkeley · Stanford · HEC Paris.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23092c47'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' fill='%23f0b32d' text-anchor='middle'%3EG%3C/text%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="nav" id="nav">
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="nav" id="nav">
         <div class="nav-inner">
-            <a href="#hero" class="nav-logo">GLB</a>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
-                <span></span><span></span><span></span>
+            <a href="#top" class="nav-brand" aria-label="Gregory La Blanc — home">
+                <span class="nav-brand-mark">G</span>
+                <span class="nav-brand-name">Gregory La Blanc</span>
+            </a>
+            <nav aria-label="Primary">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#expertise">Expertise</a></li>
+                    <li><a href="#speaking">Speaking</a></li>
+                    <li><a href="#programs">Programs</a></li>
+                    <li><a href="#podcast">Podcast</a></li>
+                    <li><a href="#credentials">Credentials</a></li>
+                    <li><a href="#media">Media</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="btn btn-small btn-gold nav-cta">Work with Greg</a>
+            <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+                <span></span><span></span>
             </button>
-            <ul class="nav-links" id="nav-links">
+        </div>
+        <div class="mobile-menu" id="mobile-menu">
+            <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#expertise">Expertise</a></li>
                 <li><a href="#speaking">Speaking</a></li>
-                <li><a href="#education-programs">Executive Education</a></li>
+                <li><a href="#programs">Programs</a></li>
                 <li><a href="#podcast">Podcast</a></li>
                 <li><a href="#credentials">Credentials</a></li>
                 <li><a href="#media">Media</a></li>
-                <li><a href="#contact" class="nav-cta">Book Greg</a></li>
+                <li><a href="#contact" class="mobile-cta">Work with Greg</a></li>
             </ul>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="hero" id="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <p class="hero-label">Berkeley &middot; Stanford &middot; HEC Paris</p>
-            <h1 class="hero-title">Gregory La Blanc</h1>
-            <p class="hero-subtitle">Distinguished Teaching Fellow. AI Strategist. Host of unSILOed.</p>
-            <blockquote class="hero-quote">
-                &ldquo;The goal of strategy is to create organizations that are resilient and that can seamlessly incorporate new technologies and trends.&rdquo;
-            </blockquote>
-            <div class="hero-actions">
-                <a href="#contact" class="btn btn-primary">Book a Speaking Engagement</a>
-                <a href="#education-programs" class="btn btn-secondary">Explore Executive Programs</a>
-                <a href="#podcast" class="btn btn-outline">Listen to unSILOed</a>
-            </div>
-        </div>
-        <div class="hero-scroll">
-            <a href="#about" aria-label="Scroll down">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"/></svg>
-            </a>
         </div>
     </header>
 
-    <!-- About Section -->
-    <section class="section" id="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About</h2>
-                <div class="section-line"></div>
-            </div>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p class="about-lead">Described by Stanford's Matt Abrahams as <em>&ldquo;truly a renaissance man,&rdquo;</em> Gregory La Blanc is a specialist in being a generalist &mdash; an interdisciplinary thinker who bridges technology, finance, law, and strategy.</p>
-                    <p>As a Distinguished Teaching Fellow at UC Berkeley's Haas School of Business, Lecturer at Stanford Graduate School of Business, and Instructor at HEC Paris, Greg teaches across six schools at three elite universities &mdash; spanning more disciplines than virtually any other business school professor in the world.</p>
-                    <p>He is the founder and Faculty Director of the Berkeley Fintech Institute, Academic Director of the AMENA Center for Entrepreneurship and Development, and host of the <strong>unSILOed</strong> podcast with over 619 episodes of interdisciplinary conversations.</p>
-                    <p>With experience working alongside executives at over 100 companies and governments worldwide, Greg brings frameworks, tools, and perspectives that help leaders understand and navigate a world of accelerating technological change.</p>
-                    <blockquote class="inline-quote">
-                        &ldquo;My greatest personal joy is experiencing 'aha' moments with others.&rdquo;
-                    </blockquote>
-                </div>
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <span class="stat-number">619+</span>
-                        <span class="stat-label">Podcast Episodes</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">100+</span>
-                        <span class="stat-label">Companies & Governments Served</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">6</span>
-                        <span class="stat-label">Schools Across 3 Universities</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">20+</span>
-                        <span class="stat-label">Years in Executive Education</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <main id="main">
 
-    <!-- Expertise Section -->
-    <section class="section section-alt" id="expertise">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Expertise Areas</h2>
-                <div class="section-line"></div>
-            </div>
-            <div class="expertise-grid">
-                <div class="expertise-card">
-                    <div class="expertise-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a4 4 0 0 1 4 4c0 1.5-.8 2.8-2 3.4V11h3a3 3 0 0 1 3 3v1h1a2 2 0 0 1 2 2v4H1v-4a2 2 0 0 1 2-2h1v-1a3 3 0 0 1 3-3h3V9.4A4 4 0 0 1 12 2z"/></svg>
+        <!-- ============ HERO ============ -->
+        <section class="hero" id="top">
+            <div class="hero-inner">
+                <div class="hero-grid">
+                    <div class="hero-main">
+                        <p class="eyebrow hero-eyebrow" data-reveal>Berkeley &middot; Stanford &middot; HEC Paris</p>
+                        <h1 class="hero-title" data-reveal>
+                            Turning AI disruption into<br>
+                            <em>organizational advantage.</em>
+                        </h1>
+                        <p class="hero-lede" data-reveal>
+                            <strong>Gregory La Blanc</strong> helps executives guide their organizations
+                            through disruptive technologies — most recently, the AI wave. He has advised
+                            leaders at more than 100 companies and governments, and teaches at
+                            UC Berkeley, Stanford, and HEC Paris.
+                        </p>
+                        <div class="hero-actions" data-reveal>
+                            <a href="#contact" class="btn btn-dark">Book a keynote</a>
+                            <a href="#podcast" class="btn btn-ghost">Listen to unSILOed <span class="btn-arrow">&rarr;</span></a>
+                        </div>
                     </div>
-                    <h3>AI Strategy & Digital Transformation</h3>
-                    <p>How organizations build resilience to absorb successive technology waves. Why culture and data assets matter more than algorithms.</p>
-                </div>
-                <div class="expertise-card">
-                    <div class="expertise-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    <div class="hero-side" data-reveal>
+                        <figure class="hero-portrait">
+                            <img src="assets/greg-portrait.jpg" alt="Portrait of Gregory La Blanc" width="900" height="900">
+                        </figure>
+                        <ul class="hero-roles">
+                            <li><span>Faculty Director, Professional Education</span> UC Berkeley College of Engineering</li>
+                            <li><span>Distinguished Teaching Fellow</span> UC Berkeley Haas</li>
+                            <li><span>Has taught at</span> Stanford GSB &amp; HEC Paris</li>
+                            <li><span>Host</span> unSILOed Podcast</li>
+                        </ul>
                     </div>
-                    <h3>Fintech & Future of Finance</h3>
-                    <p>Founder of the Berkeley Fintech Institute. Expert on blockchain, venture finance, and regulatory dynamics in financial innovation.</p>
-                </div>
-                <div class="expertise-card">
-                    <div class="expertise-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
-                    </div>
-                    <h3>Data-Driven Decision Making</h3>
-                    <p>Building data strategies, managing data science teams, and designing organizations that experiment and learn.</p>
-                </div>
-                <div class="expertise-card">
-                    <div class="expertise-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    </div>
-                    <h3>Innovation & Business Model Disruption</h3>
-                    <p>Platform economics, sharing economy, smart contracts, and how incumbents adapt to disruptive forces.</p>
-                </div>
-                <div class="expertise-card">
-                    <div class="expertise-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                    </div>
-                    <h3>Leadership & Communication</h3>
-                    <p>Strategic leadership, how communication tests understanding, and the art of translating ideas across disciplines.</p>
-                </div>
-                <div class="expertise-card">
-                    <div class="expertise-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-                    </div>
-                    <h3>Future of Education</h3>
-                    <p>AI in learning, interdisciplinary thinking, the evolving MBA, and why curiosity is the most important skill of all.</p>
                 </div>
             </div>
-            <div class="expertise-quote">
-                <blockquote>
-                    &ldquo;Companies have been using artificial intelligence since day one. The real differentiator is an organization's ability to integrate new tools seamlessly into their operations.&rdquo;
-                </blockquote>
+            <div class="marquee" aria-hidden="true">
+                <div class="marquee-track">
+                    <span>UC Berkeley College of Engineering</span><i>&#9670;</i>
+                    <span>Stanford GSB</span><i>&#9670;</i>
+                    <span>HEC Paris</span><i>&#9670;</i>
+                    <span>Berkeley SkyDeck</span><i>&#9670;</i>
+                    <span>unSILOed Podcast</span><i>&#9670;</i>
+                    <span>Berkeley Haas</span><i>&#9670;</i>
+                    <span>Berkeley Law</span><i>&#9670;</i>
+                    <span>Stanford Engineering</span><i>&#9670;</i>
+                    <span>UC Berkeley College of Engineering</span><i>&#9670;</i>
+                    <span>Stanford GSB</span><i>&#9670;</i>
+                    <span>HEC Paris</span><i>&#9670;</i>
+                    <span>Berkeley SkyDeck</span><i>&#9670;</i>
+                    <span>unSILOed Podcast</span><i>&#9670;</i>
+                    <span>Berkeley Haas</span><i>&#9670;</i>
+                    <span>Berkeley Law</span><i>&#9670;</i>
+                    <span>Stanford Engineering</span><i>&#9670;</i>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Speaking Section -->
-    <section class="section" id="speaking">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Speaking & Keynotes</h2>
-                <div class="section-line"></div>
+        <!-- ============ ABOUT ============ -->
+        <section class="section" id="about">
+            <div class="container">
+                <header class="section-head" data-reveal>
+                    <p class="eyebrow"><span class="eyebrow-num">01</span> About</p>
+                    <h2 class="section-title">Curiosity, applied at scale</h2>
+                </header>
+                <div class="about-grid">
+                    <div class="about-text" data-reveal>
+                        <p class="lead">For the past decade, Greg's work has centered on one question: how do organizations absorb AI and emerging technology — <em>and turn it into advantage?</em></p>
+                        <p>His academic home is UC Berkeley's College of Engineering, where he is Faculty Director of Professional Education and a Lecturer. He is also a Distinguished Teaching Fellow at Berkeley Haas, and has taught at Stanford Graduate School of Business and HEC Paris.</p>
+                        <p>He hosts <strong>unSILOed</strong>, a podcast with more than 600 episodes of conversation across disciplines — the same range he brings to AI strategy, connecting technology with finance, law, and organizational design.</p>
+                        <p>Greg has worked alongside executives at more than 100 companies and governments, and has taught in over 30 countries — bringing the frameworks, tools, and perspectives leaders need to navigate accelerating technological change.</p>
+                        <p>Beyond the university, he advises U.S. pension funds — including teachers' and public-employee retirement systems — and is an active angel investor and AI advisor to startups.</p>
+                    </div>
+                    <aside class="about-side" data-reveal>
+                        <div class="stats">
+                            <div class="stat">
+                                <span class="stat-number" data-count="100" data-suffix="+">0</span>
+                                <span class="stat-label">Companies &amp; governments advised</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number" data-count="30" data-suffix="+">0</span>
+                                <span class="stat-label">Countries taught in</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number" data-count="600" data-suffix="+">0</span>
+                                <span class="stat-label">Podcast episodes</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number" data-count="20" data-suffix="+">0</span>
+                                <span class="stat-label">Years in executive education</span>
+                            </div>
+                        </div>
+                        <blockquote class="side-quote">
+                            &ldquo;My greatest personal joy is experiencing &lsquo;aha&rsquo; moments with others.&rdquo;
+                        </blockquote>
+                    </aside>
+                </div>
+                <figure class="about-figure" data-reveal>
+                    <img src="assets/greg-teaching.jpg" alt="Gregory La Blanc teaching a class" width="1600" height="877" loading="lazy">
+                    <figcaption>In the classroom — two decades of teaching MBAs, engineers, lawyers, and executives.</figcaption>
+                </figure>
             </div>
-            <p class="section-intro">Greg delivers keynotes and workshops for executive audiences worldwide on AI strategy, digital transformation, fintech, innovation, and leadership. His talks combine rigorous frameworks with engaging storytelling drawn from 619+ podcast conversations and two decades of executive education.</p>
-            <div class="speaking-topics">
-                <h3>Popular Speaking Topics</h3>
+        </section>
+
+        <!-- ============ EXPERTISE ============ -->
+        <section class="section section-tint" id="expertise">
+            <div class="container">
+                <header class="section-head" data-reveal>
+                    <p class="eyebrow"><span class="eyebrow-num">02</span> Expertise</p>
+                    <h2 class="section-title">Where disciplines meet</h2>
+                </header>
+                <div class="expertise-grid">
+                    <article class="expertise-card" data-reveal>
+                        <span class="card-num">01</span>
+                        <h3>AI Strategy &amp; Digital Transformation</h3>
+                        <p>How organizations build the resilience to absorb successive technology waves — and why culture and data assets matter more than algorithms.</p>
+                    </article>
+                    <article class="expertise-card" data-reveal>
+                        <span class="card-num">02</span>
+                        <h3>Fintech &amp; the Future of Finance</h3>
+                        <p>How AI, blockchain, and venture finance are reshaping banking and capital markets — and what regulators will do about it.</p>
+                    </article>
+                    <article class="expertise-card" data-reveal>
+                        <span class="card-num">03</span>
+                        <h3>Data-Driven Decision Making</h3>
+                        <p>Building data strategies, managing data science teams, and designing organizations that experiment and learn.</p>
+                    </article>
+                    <article class="expertise-card" data-reveal>
+                        <span class="card-num">04</span>
+                        <h3>Innovation &amp; Disruption</h3>
+                        <p>Platform economics, the sharing economy, smart contracts, and how incumbents adapt to disruptive forces.</p>
+                    </article>
+                    <article class="expertise-card" data-reveal>
+                        <span class="card-num">05</span>
+                        <h3>Leadership &amp; Communication</h3>
+                        <p>Strategic leadership, how communication tests understanding, and the art of translating ideas across disciplines.</p>
+                    </article>
+                    <article class="expertise-card" data-reveal>
+                        <span class="card-num">06</span>
+                        <h3>The Future of Education</h3>
+                        <p>AI in learning, interdisciplinary thinking, the evolving MBA — and why curiosity is the most important skill of all.</p>
+                    </article>
+                </div>
+                <figure class="pull-quote" data-reveal>
+                    <blockquote>Companies have been using artificial intelligence since day one. The real differentiator is an organization's ability to integrate new tools <em>seamlessly</em> into their operations.</blockquote>
+                </figure>
+                <div class="section-cta" data-reveal>
+                    <a href="#contact" class="btn btn-dark">Ask how this applies to your organization</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ SPEAKING ============ -->
+        <section class="section" id="speaking">
+            <div class="container">
+                <header class="section-head" data-reveal>
+                    <p class="eyebrow"><span class="eyebrow-num">03</span> Speaking</p>
+                    <h2 class="section-title">Keynotes that connect the dots</h2>
+                    <p class="section-intro">Not another "AI is coming" talk. Greg's keynotes give executive audiences a working playbook — drawn from AI transformations at 100+ organizations, 600+ podcast conversations, and two decades in executive education.</p>
+                </header>
                 <div class="topics-grid">
-                    <div class="topic-card">
-                        <h4>Building AI-Resilient Organizations</h4>
-                        <p>Why the technological waves will keep coming faster, and how to create organizations that absorb them seamlessly.</p>
-                    </div>
-                    <div class="topic-card">
-                        <h4>Data Strategy as Competitive Advantage</h4>
-                        <p>The algorithms are commodified. Your real moat is your data assets, culture, and organizational architecture.</p>
-                    </div>
-                    <div class="topic-card">
-                        <h4>The Fintech Revolution &amp; Regulatory Future</h4>
-                        <p>How financial innovation is reshaping banking, payments, and capital markets &mdash; and why you can't move fast and break things in finance.</p>
-                    </div>
-                    <div class="topic-card">
-                        <h4>From Digital Transformation to Digital Fluency</h4>
-                        <p>Every employee must be empowered to use AI tools the same way they currently use Excel or PowerPoint.</p>
-                    </div>
+                    <article class="topic-card" data-reveal>
+                        <h3>Built to Absorb: Designing Organizations That Metabolize AI</h3>
+                        <p>Why most AI initiatives stall at the pilot stage — and the architecture, incentives, and culture of companies that turn each new technology wave into compounding advantage.</p>
+                    </article>
+                    <article class="topic-card" data-reveal>
+                        <h3>Your Data Is the Moat: Strategy When Algorithms Are Free</h3>
+                        <p>Every competitor can rent the same models. What they can't rent is your proprietary data, your feedback loops, and an organization built to learn from them.</p>
+                    </article>
+                    <article class="topic-card" data-reveal>
+                        <h3>Money Moves Fast, Trust Moves Slow: AI &amp; the Future of Finance</h3>
+                        <p>What AI actually changes in banking, payments, and capital markets — and why "move fast and break things" fails in an industry built on trust and regulation.</p>
+                    </article>
+                    <article class="topic-card" data-reveal>
+                        <h3>From Chatbots to Colleagues: Getting a Workforce to AI Fluency</h3>
+                        <p>The endgame isn't a transformation program — it's every employee wielding AI as naturally as a spreadsheet. What that transition demands from leadership.</p>
+                    </article>
+                </div>
+                <div class="engagements" data-reveal>
+                    <h3 class="sub-head">Select engagements</h3>
+                    <ul class="engagement-list">
+                        <li><span class="venue">The Financial Academy, Saudi Arabia</span><span class="talk">Executive Programs in AI &amp; Finance</span></li>
+                        <li><span class="venue">Me2We 2025, Stanford LEAD</span><span class="talk">VC Bootcamp: A Deep Dive into AI Investments</span></li>
+                        <li><span class="venue">Berkeley Haas Alumni Conference</span><span class="talk">Will AI Make Us More Productive?</span></li>
+                        <li><span class="venue">Evergreen Lectures, TU Wien (Austria)</span><span class="talk">Berkeley Certificate Course in Data Science</span></li>
+                        <li><span class="venue">TiE Inflect, Silicon Valley</span><span class="talk">Startup Bootcamp</span></li>
+                    </ul>
+                    <a href="#contact" class="btn btn-dark">Book a talk</a>
                 </div>
             </div>
-            <div class="speaking-engagements">
-                <h3>Select Engagements</h3>
-                <ul class="engagement-list">
-                    <li>Me2We 2025, Stanford LEAD &mdash; <em>VC Bootcamp: A Deep Dive into AI Investments</em></li>
-                    <li>Berkeley Haas Alumni Conference &mdash; <em>Will AI Make Us More Productive?</em></li>
-                    <li>TiE Inflect 2018, Silicon Valley &mdash; <em>Startup Bootcamp</em></li>
-                    <li>Berkeley-Istanbul Conference on Entrepreneurship &mdash; <em>Bridging the East-West Divide</em></li>
-                    <li>Sophia University, Tokyo &mdash; <em>Keynote Lecture</em></li>
-                    <li>Evergreen Lectures, Austria &mdash; <em>Data Science and Digital Transformation</em></li>
-                    <li>Last Longer ME Conference, Middle East &mdash; <em>Big Data &amp; Predictive Analytics</em></li>
-                </ul>
-            </div>
-            <div class="section-cta">
-                <a href="#contact" class="btn btn-primary">Inquire About Speaking</a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Executive Education Section -->
-    <section class="section section-alt" id="education-programs">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Executive Education</h2>
-                <div class="section-line"></div>
-            </div>
-            <p class="section-intro">Greg designs and leads executive programs that equip leaders with the frameworks, tools, and perspectives needed to navigate digital transformation, AI adoption, and innovation strategy.</p>
-            <div class="program-featured">
-                <div class="program-card program-card-featured">
-                    <span class="program-badge">Flagship Program</span>
-                    <h3>Emerging Tech Management (ETM) Week</h3>
-                    <p class="program-subtitle">Strategic Digital Transformation: Innovate and Future-Proof Your Enterprise in One Week</p>
-                    <div class="program-details">
-                        <div class="program-detail">
-                            <strong>Duration</strong>
-                            <span>5 Days</span>
-                        </div>
-                        <div class="program-detail">
-                            <strong>Location</strong>
-                            <span>UC Berkeley Campus & Silicon Valley</span>
-                        </div>
-                        <div class="program-detail">
-                            <strong>Hosted By</strong>
-                            <span>UC Berkeley SCET & CKGSB</span>
-                        </div>
-                        <div class="program-detail">
-                            <strong>For</strong>
-                            <span>Executives, Innovation Leads, Government Professionals</span>
-                        </div>
+        <!-- ============ EXECUTIVE EDUCATION ============ -->
+        <section class="section section-tint" id="programs">
+            <div class="container">
+                <header class="section-head" data-reveal>
+                    <p class="eyebrow"><span class="eyebrow-num">04</span> Executive Education</p>
+                    <h2 class="section-title">Programs that future-proof leaders</h2>
+                    <p class="section-intro">Greg has designed and directed executive programs for Cisco, Bank of America, Google, Sberbank, Saudi PIF, Zynga, and the Asset Managers Association of China — and taught in programs at Fudan University, Melbourne Business School, City University of Hong Kong, and UCSF.</p>
+                </header>
+                <article class="featured-program" data-reveal>
+                    <div class="featured-program-main">
+                        <p class="badge">Flagship program</p>
+                        <h3>Emerging Tech Management Week</h3>
+                        <p class="featured-sub">Strategic digital transformation: innovate and future-proof your enterprise in one week.</p>
+                        <p>Five days at UC Berkeley and in Silicon Valley — company site visits plus sessions with leading faculty including Pieter Abbeel (AI &amp; robotics) and Stuart Russell (AI safety), alongside executives from Coca-Cola, PayPal, BCG, and Accenture.</p>
                     </div>
-                    <p>Includes Silicon Valley company site visits and sessions with leading faculty including Pieter Abbeel (AI/Robotics), Stuart Russell (AI Safety), and executives from Coca-Cola, PayPal, BCG, and Accenture.</p>
+                    <dl class="featured-program-facts">
+                        <div><dt>Duration</dt><dd>5 days</dd></div>
+                        <div><dt>Location</dt><dd>UC Berkeley &amp; Silicon Valley</dd></div>
+                        <div><dt>Hosted by</dt><dd>UC Berkeley SCET &amp; CKGSB</dd></div>
+                        <div><dt>For</dt><dd>Executives, innovation leads, government professionals</dd></div>
+                    </dl>
+                </article>
+                <div class="programs-grid">
+                    <article class="program-card" data-reveal>
+                        <h3>AI Leadership Accelerator</h3>
+                        <p>An intensive for senior leaders navigating AI adoption and organizational transformation.</p>
+                    </article>
+                    <article class="program-card" data-reveal>
+                        <h3>Mastercard Digital Safari</h3>
+                        <p>Executive immersion bringing financial-institution leaders to Berkeley and Silicon Valley.</p>
+                    </article>
+                    <article class="program-card" data-reveal>
+                        <h3>Custom Corporate Programs</h3>
+                        <p>Tailored digital-transformation workshops for companies, governments, and financial institutions worldwide.</p>
+                    </article>
+                </div>
+                <div class="section-cta" data-reveal>
+                    <a href="#contact" class="btn btn-dark">Request a program proposal</a>
                 </div>
             </div>
-            <div class="programs-grid">
-                <div class="program-card">
-                    <h3>AI Leadership Accelerator</h3>
-                    <p>Intensive program for senior leaders navigating AI adoption and organizational transformation.</p>
-                </div>
-                <div class="program-card">
-                    <h3>Mastercard Digital Safari</h3>
-                    <p>Executive immersion bringing financial institution leaders to Berkeley and Silicon Valley for digital innovation education.</p>
-                </div>
-                <div class="program-card">
-                    <h3>Custom Corporate Programs</h3>
-                    <p>Tailored digital transformation workshops for organizations worldwide, including governments and financial institutions.</p>
-                </div>
-            </div>
-            <div class="section-cta">
-                <a href="#contact" class="btn btn-primary">Explore Programs</a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Podcast Section -->
-    <section class="section" id="podcast">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">The unSILOed Podcast</h2>
-                <div class="section-line"></div>
+        <!-- ============ TRACK RECORD ============ -->
+        <section class="section" id="track-record">
+            <div class="container">
+                <header class="section-head" data-reveal>
+                    <p class="eyebrow">Track record</p>
+                    <h2 class="section-title">Taught for. <em>Worked with.</em></h2>
+                </header>
+                <h3 class="sub-head" data-reveal>Universities <span class="scroll-hint">scroll &rarr;</span></h3>
             </div>
-            <div class="podcast-intro">
-                <p class="podcast-tagline">&ldquo;A series of interdisciplinary conversations that inspire new ways of thinking about our world.&rdquo;</p>
-                <p>With <strong>619+ episodes</strong>, unSILOed is one of the most prolific interdisciplinary interview podcasts in existence. Greg hosts conversations with distinguished authors and experts across 50+ topic areas, building a community of lifelong learners addicted to curiosity.</p>
-            </div>
-            <div class="podcast-topics">
-                <h3>Topics by Episode Count</h3>
-                <div class="topic-bars">
-                    <div class="topic-bar">
-                        <span class="topic-name">History</span>
-                        <div class="bar-track"><div class="bar-fill" style="width: 100%"></div></div>
-                        <span class="topic-count">96</span>
-                    </div>
-                    <div class="topic-bar">
-                        <span class="topic-name">Psychology</span>
-                        <div class="bar-track"><div class="bar-fill" style="width: 97.9%"></div></div>
-                        <span class="topic-count">94</span>
-                    </div>
-                    <div class="topic-bar">
-                        <span class="topic-name">Economics</span>
-                        <div class="bar-track"><div class="bar-fill" style="width: 86.5%"></div></div>
-                        <span class="topic-count">83</span>
-                    </div>
-                    <div class="topic-bar">
-                        <span class="topic-name">Philosophy</span>
-                        <div class="bar-track"><div class="bar-fill" style="width: 54.2%"></div></div>
-                        <span class="topic-count">52</span>
-                    </div>
-                    <div class="topic-bar">
-                        <span class="topic-name">Biology</span>
-                        <div class="bar-track"><div class="bar-fill" style="width: 44.8%"></div></div>
-                        <span class="topic-count">43</span>
-                    </div>
-                    <div class="topic-bar">
-                        <span class="topic-name">Strategy</span>
-                        <div class="bar-track"><div class="bar-fill" style="width: 44.8%"></div></div>
-                        <span class="topic-count">43</span>
-                    </div>
-                    <div class="topic-bar">
-                        <span class="topic-name">Finance</span>
-                        <div class="bar-track"><div class="bar-fill" style="width: 40.6%"></div></div>
-                        <span class="topic-count">39</span>
-                    </div>
-                    <div class="topic-bar">
-                        <span class="topic-name">Law</span>
-                        <div class="bar-track"><div class="bar-fill" style="width: 39.6%"></div></div>
-                        <span class="topic-count">38</span>
-                    </div>
-                    <div class="topic-bar">
-                        <span class="topic-name">Innovation</span>
-                        <div class="bar-track"><div class="bar-fill" style="width: 33.3%"></div></div>
-                        <span class="topic-count">32</span>
-                    </div>
-                    <div class="topic-bar">
-                        <span class="topic-name">A.I.</span>
-                        <div class="bar-track"><div class="bar-fill" style="width: 25%"></div></div>
-                        <span class="topic-count">24</span>
-                    </div>
+            <div class="logo-scroller" data-reveal>
+                <div class="logo-track">
+                    <img src="assets/logos/uni-berkeley-eng.png" alt="UC Berkeley College of Engineering" title="UC Berkeley College of Engineering" loading="lazy">
+                    <img src="assets/logos/uni-haas.png" alt="Berkeley Haas" title="Berkeley Haas" loading="lazy">
+                    <img src="assets/logos/uni-berkeley-law.png" alt="Berkeley Law" title="Berkeley Law" loading="lazy">
+                    <img src="assets/logos/uni-stanford-gsb.png" alt="Stanford GSB" title="Stanford GSB" loading="lazy">
+                    <img src="assets/logos/uni-hec.png" alt="HEC Paris" title="HEC Paris" loading="lazy">
+                    <img src="assets/logos/uni-lbs.png" alt="London Business School" title="London Business School" loading="lazy">
+                    <img src="assets/logos/uni-imd.png" alt="IMD" title="IMD" loading="lazy">
+                    <img src="assets/logos/uni-escp.png" alt="ESCP Business School" title="ESCP Business School" loading="lazy">
+                    <img src="assets/logos/uni-tsinghua.png" alt="Tsinghua University" title="Tsinghua University" loading="lazy">
+                    <img src="assets/logos/uni-peking.png" alt="Peking University" title="Peking University" loading="lazy">
+                    <img src="assets/logos/uni-ceibs.png" alt="CEIBS" title="CEIBS" loading="lazy">
+                    <img src="assets/logos/uni-renmin.png" alt="Renmin University of China" title="Renmin University of China" loading="lazy">
+                    <img src="assets/logos/fudan.png" alt="Fudan University" title="Fudan University" loading="lazy">
+                    <img src="assets/logos/uni-sjtu.png" alt="Shanghai Jiao Tong University" title="Shanghai Jiao Tong University" loading="lazy">
+                    <img src="assets/logos/uni-saif.png" alt="SAIF" title="SAIF" loading="lazy">
+                    <img src="assets/logos/uni-nanyang.png" alt="Nanyang Technological University" title="Nanyang Technological University" loading="lazy">
+                    <img src="assets/logos/cityu.png" alt="City University of Hong Kong" title="City University of Hong Kong" loading="lazy">
+                    <img src="assets/logos/uni-ie.png" alt="IE" title="IE" loading="lazy">
+                    <img src="assets/logos/uni-esade.png" alt="Esade" title="Esade" loading="lazy">
+                    <img src="assets/logos/uni-comillas.png" alt="Universidad Pontificia Comillas" title="Universidad Pontificia Comillas" loading="lazy">
+                    <img src="assets/logos/uni-ckgsb.png" alt="CKGSB" title="CKGSB" loading="lazy">
+                    <img src="assets/logos/uni-polytechnique.png" alt="École Polytechnique" title="École Polytechnique" loading="lazy">
+                    <img src="assets/logos/uni-warwick.png" alt="Warwick Business School" title="Warwick Business School" loading="lazy">
+                    <img src="assets/logos/uni-reading.png" alt="University of Reading" title="University of Reading" loading="lazy">
+                    <img src="assets/logos/uni-tuwien.png" alt="TU Wien" title="TU Wien" loading="lazy">
+                    <img src="assets/logos/uni-neoma.png" alt="NEOMA Business School" title="NEOMA Business School" loading="lazy">
+                    <img src="assets/logos/uni-nyenrode.png" alt="Nyenrode Business University" title="Nyenrode Business University" loading="lazy">
+                    <img src="assets/logos/uni-monash.png" alt="Monash University" title="Monash University" loading="lazy">
+                    <img src="assets/logos/uni-kaust.png" alt="KAUST" title="KAUST" loading="lazy">
+                    <img src="assets/logos/uni-stellenbosch.png" alt="Stellenbosch Business School" title="Stellenbosch Business School" loading="lazy">
+                    <img src="assets/logos/uni-tec.png" alt="Tec de Monterrey" title="Tec de Monterrey" loading="lazy">
+                    <img src="assets/logos/uni-fgv.png" alt="Fundação Getulio Vargas" title="Fundação Getulio Vargas" loading="lazy">
+                    <img src="assets/logos/uni-insper.png" alt="Insper" title="Insper" loading="lazy">
+                    <img src="assets/logos/uni-losandes.png" alt="Universidad de los Andes" title="Universidad de los Andes" loading="lazy">
+                    <img src="assets/logos/uni-incae.png" alt="INCAE Business School" title="INCAE Business School" loading="lazy">
+                    <img src="assets/logos/uni-inalde.png" alt="INALDE Business School" title="INALDE Business School" loading="lazy">
+                    <img src="assets/logos/ucsf.png" alt="UCSF" title="UCSF" loading="lazy">
+                    <img src="assets/logos/skolkovo.png" alt="SKOLKOVO Moscow School of Management" title="SKOLKOVO Moscow School of Management" loading="lazy">
                 </div>
             </div>
-            <div class="podcast-guests">
-                <h3>Notable Guests</h3>
-                <div class="guests-grid">
-                    <div class="guest-card">
-                        <strong>Jeff Immelt</strong>
-                        <span>Former GE CEO, Stanford</span>
-                    </div>
-                    <div class="guest-card">
-                        <strong>Gary Hamel</strong>
-                        <span>London Business School</span>
-                    </div>
-                    <div class="guest-card">
-                        <strong>Geoffrey A. Moore</strong>
-                        <span>Author, Crossing the Chasm</span>
-                    </div>
-                    <div class="guest-card">
-                        <strong>Barbara Kellerman</strong>
-                        <span>Harvard Kennedy School</span>
-                    </div>
-                    <div class="guest-card">
-                        <strong>Jay Barney</strong>
-                        <span>University of Utah</span>
-                    </div>
-                    <div class="guest-card">
-                        <strong>Margaret Heffernan</strong>
-                        <span>University of Bath</span>
-                    </div>
+            <div class="container">
+                <h3 class="sub-head" data-reveal>Companies, governments &amp; institutions <span class="scroll-hint">scroll &rarr;</span></h3>
+            </div>
+            <div class="logo-scroller" data-reveal>
+                <div class="logo-track">
+                    <img src="assets/logos/google.png" alt="Google" title="Google" loading="lazy">
+                    <img src="assets/logos/facebook.png" alt="Facebook" title="Facebook" loading="lazy">
+                    <img src="assets/logos/mckinsey.png" alt="McKinsey & Company" title="McKinsey & Company" loading="lazy">
+                    <img src="assets/logos/bcg.png" alt="BCG" title="BCG" loading="lazy">
+                    <img src="assets/logos/accenture.png" alt="Accenture" title="Accenture" loading="lazy">
+                    <img src="assets/logos/capgemini.png" alt="Capgemini" title="Capgemini" loading="lazy">
+                    <img src="assets/logos/cisco.png" alt="Cisco" title="Cisco" loading="lazy">
+                    <img src="assets/logos/oracle.png" alt="Oracle" title="Oracle" loading="lazy">
+                    <img src="assets/logos/salesforce.png" alt="Salesforce" title="Salesforce" loading="lazy">
+                    <img src="assets/logos/vmware.png" alt="VMware" title="VMware" loading="lazy">
+                    <img src="assets/logos/autodesk.png" alt="Autodesk" title="Autodesk" loading="lazy">
+                    <img src="assets/logos/samsung.png" alt="Samsung" title="Samsung" loading="lazy">
+                    <img src="assets/logos/coca-cola.png" alt="Coca-Cola" title="Coca-Cola" loading="lazy">
+                    <img src="assets/logos/pg.png" alt="Procter & Gamble" title="Procter & Gamble" loading="lazy">
+                    <img src="assets/logos/ikea.png" alt="IKEA" title="IKEA" loading="lazy">
+                    <img src="assets/logos/morgan-stanley.png" alt="Morgan Stanley" title="Morgan Stanley" loading="lazy">
+                    <img src="assets/logos/blackrock.png" alt="BlackRock" title="BlackRock" loading="lazy">
+                    <img src="assets/logos/wells-fargo.png" alt="Wells Fargo" title="Wells Fargo" loading="lazy">
+                    <img src="assets/logos/bofa.png" alt="Bank of America" title="Bank of America" loading="lazy">
+                    <img src="assets/logos/merrill.png" alt="Merrill" title="Merrill" loading="lazy">
+                    <img src="assets/logos/bnp.png" alt="BNP Paribas" title="BNP Paribas" loading="lazy">
+                    <img src="assets/logos/mastercard.png" alt="Mastercard" title="Mastercard" loading="lazy">
+                    <img src="assets/logos/citadel.png" alt="Citadel" title="Citadel" loading="lazy">
+                    <img src="assets/logos/sequoia.png" alt="Sequoia Capital" title="Sequoia Capital" loading="lazy">
+                    <img src="assets/logos/palantir.png" alt="Palantir" title="Palantir" loading="lazy">
+                    <img src="assets/logos/thomson-reuters.png" alt="Thomson Reuters" title="Thomson Reuters" loading="lazy">
+                    <img src="assets/logos/munich-re.png" alt="Munich Re" title="Munich Re" loading="lazy">
+                    <img src="assets/logos/marsh-mclennan.png" alt="Marsh & McLennan" title="Marsh & McLennan" loading="lazy">
+                    <img src="assets/logos/massmutual.png" alt="MassMutual" title="MassMutual" loading="lazy">
+                    <img src="assets/logos/suntrust.png" alt="SunTrust" title="SunTrust" loading="lazy">
+                    <img src="assets/logos/first-hawaiian.png" alt="First Hawaiian Bank" title="First Hawaiian Bank" loading="lazy">
+                    <img src="assets/logos/ge.png" alt="General Electric" title="General Electric" loading="lazy">
+                    <img src="assets/logos/exxonmobil.png" alt="ExxonMobil" title="ExxonMobil" loading="lazy">
+                    <img src="assets/logos/gazprom.png" alt="Gazprom" title="Gazprom" loading="lazy">
+                    <img src="assets/logos/orange.png" alt="Orange" title="Orange" loading="lazy">
+                    <img src="assets/logos/china-telecom.png" alt="China Telecom" title="China Telecom" loading="lazy">
+                    <img src="assets/logos/china-merchants.png" alt="China Merchants Bank" title="China Merchants Bank" loading="lazy">
+                    <img src="assets/logos/virgin-america.png" alt="Virgin America" title="Virgin America" loading="lazy">
+                    <img src="assets/logos/alibaba.png" alt="Alibaba" title="Alibaba" loading="lazy">
+                    <img src="assets/logos/tencent.png" alt="Tencent" title="Tencent" loading="lazy">
+                    <img src="assets/logos/genentech.png" alt="Genentech" title="Genentech" loading="lazy">
+                    <img src="assets/logos/gilead.png" alt="Gilead Sciences" title="Gilead Sciences" loading="lazy">
+                    <img src="assets/logos/sinopec.png" alt="Sinopec" title="Sinopec" loading="lazy">
+                    <img src="assets/logos/zynga.png" alt="Zynga" title="Zynga" loading="lazy">
+                    <img src="assets/logos/avaya.png" alt="Avaya" title="Avaya" loading="lazy">
+                    <img src="assets/logos/bt.png" alt="BT" title="BT" loading="lazy">
+                    <img src="assets/logos/sce.png" alt="Southern California Edison" title="Southern California Edison" loading="lazy">
+                    <img src="assets/logos/swiss-post.png" alt="Swiss Post" title="Swiss Post" loading="lazy">
+                    <img src="assets/logos/randstad.png" alt="Randstad" title="Randstad" loading="lazy">
+                    <img src="assets/logos/schibsted.png" alt="Schibsted" title="Schibsted" loading="lazy">
+                    <img src="assets/logos/tuv-sud.png" alt="TÜV SÜD" title="TÜV SÜD" loading="lazy">
+                    <img src="assets/logos/heb.png" alt="H-E-B" title="H-E-B" loading="lazy">
+                    <img src="assets/logos/danske.png" alt="Danske Bank" title="Danske Bank" loading="lazy">
+                    <img src="assets/logos/bankinter.png" alt="Bankinter" title="Bankinter" loading="lazy">
+                    <img src="assets/logos/banesco.png" alt="Banesco" title="Banesco" loading="lazy">
+                    <img src="assets/logos/garanti.png" alt="Garanti BBVA" title="Garanti BBVA" loading="lazy">
+                    <img src="assets/logos/isbank.png" alt="İşbank" title="İşbank" loading="lazy">
+                    <img src="assets/logos/sabanci.png" alt="Sabancı Holding" title="Sabancı Holding" loading="lazy">
+                    <img src="assets/logos/yapikredi.png" alt="Yapı Kredi" title="Yapı Kredi" loading="lazy">
+                    <img src="assets/logos/koc.png" alt="Koç Holding" title="Koç Holding" loading="lazy">
+                    <img src="assets/logos/borusan.png" alt="Borusan" title="Borusan" loading="lazy">
+                    <img src="assets/logos/banca-transilvania.png" alt="Banca Transilvania" title="Banca Transilvania" loading="lazy">
+                    <img src="assets/logos/bank-of-georgia.png" alt="Bank of Georgia" title="Bank of Georgia" loading="lazy">
+                    <img src="assets/logos/privatbank.png" alt="PrivatBank" title="PrivatBank" loading="lazy">
+                    <img src="assets/logos/sberbank.png" alt="Sberbank" title="Sberbank" loading="lazy">
+                    <img src="assets/logos/rostelecom.png" alt="Rostelecom" title="Rostelecom" loading="lazy">
+                    <img src="assets/logos/rosatom.png" alt="Rosatom" title="Rosatom" loading="lazy">
+                    <img src="assets/logos/borsa-istanbul.png" alt="Borsa İstanbul" title="Borsa İstanbul" loading="lazy">
+                    <img src="assets/logos/pif.png" alt="Saudi PIF" title="Saudi PIF" loading="lazy">
+                    <img src="assets/logos/saudi-mim.png" alt="Saudi Ministry of Industry & Mineral Resources" title="Saudi Ministry of Industry & Mineral Resources" loading="lazy">
+                    <img src="assets/logos/financial-academy.png" alt="The Financial Academy" title="The Financial Academy" loading="lazy">
+                    <img src="assets/logos/sab-invest.png" alt="SAB Invest" title="SAB Invest" loading="lazy">
+                    <img src="assets/logos/ega.png" alt="Emirates Global Aluminium" title="Emirates Global Aluminium" loading="lazy">
+                    <img src="assets/logos/kazakhtelecom.png" alt="Kazakhtelecom" title="Kazakhtelecom" loading="lazy">
+                    <img src="assets/logos/astana-hub.png" alt="Astana Hub" title="Astana Hub" loading="lazy">
+                    <img src="assets/logos/localiza.png" alt="Localiza" title="Localiza" loading="lazy">
+                    <img src="assets/logos/aguia-branca.png" alt="Grupo Águia Branca" title="Grupo Águia Branca" loading="lazy">
+                    <img src="assets/logos/aboitiz.png" alt="Aboitiz" title="Aboitiz" loading="lazy">
+                    <img src="assets/logos/alignment.png" alt="Alignment Health" title="Alignment Health" loading="lazy">
+                    <img src="assets/logos/lanl.png" alt="Los Alamos National Laboratory" title="Los Alamos National Laboratory" loading="lazy">
+                    <img src="assets/logos/sandia.png" alt="Sandia National Laboratories" title="Sandia National Laboratories" loading="lazy">
+                    <img src="assets/logos/llnl.png" alt="Lawrence Livermore National Laboratory" title="Lawrence Livermore National Laboratory" loading="lazy">
+                    <img src="assets/logos/doc.png" alt="U.S. Department of Commerce" title="U.S. Department of Commerce" loading="lazy">
+                    <img src="assets/logos/china-emblem.png" alt="Government of China" title="Government of China" loading="lazy">
+                    <img src="assets/logos/azerbaijan-emblem.png" alt="Government of Azerbaijan" title="Government of Azerbaijan" loading="lazy">
                 </div>
             </div>
-            <div class="podcast-reviews">
-                <h3>What Listeners Say</h3>
+            <div class="container">
+                <p class="wall-note" data-reveal>&hellip;and executives from 30+ countries.</p>
+            </div>
+        </section>
+
+        <!-- ============ PODCAST ============ -->
+        <section class="section section-dark" id="podcast">
+            <div class="container">
+                <header class="section-head" data-reveal>
+                    <p class="eyebrow"><span class="eyebrow-num">05</span> The unSILOed Podcast</p>
+                    <h2 class="section-title">600+ conversations across the silos</h2>
+                    <p class="section-intro">Interdisciplinary conversations with distinguished authors and experts across 50+ fields — inspiring new ways of thinking about our world.</p>
+                </header>
+                <div class="podcast-grid">
+                    <div class="podcast-chart" data-reveal>
+                        <h3 class="sub-head">Episodes by topic</h3>
+                        <div class="topic-bars">
+                            <div class="topic-bar"><span class="topic-name">History</span><div class="bar-track"><div class="bar-fill" data-width="100"></div></div><span class="topic-count">96</span></div>
+                            <div class="topic-bar"><span class="topic-name">Psychology</span><div class="bar-track"><div class="bar-fill" data-width="98"></div></div><span class="topic-count">94</span></div>
+                            <div class="topic-bar"><span class="topic-name">Economics</span><div class="bar-track"><div class="bar-fill" data-width="86"></div></div><span class="topic-count">83</span></div>
+                            <div class="topic-bar"><span class="topic-name">Philosophy</span><div class="bar-track"><div class="bar-fill" data-width="54"></div></div><span class="topic-count">52</span></div>
+                            <div class="topic-bar"><span class="topic-name">Biology</span><div class="bar-track"><div class="bar-fill" data-width="45"></div></div><span class="topic-count">43</span></div>
+                            <div class="topic-bar"><span class="topic-name">Strategy</span><div class="bar-track"><div class="bar-fill" data-width="45"></div></div><span class="topic-count">43</span></div>
+                            <div class="topic-bar"><span class="topic-name">Finance</span><div class="bar-track"><div class="bar-fill" data-width="41"></div></div><span class="topic-count">39</span></div>
+                            <div class="topic-bar"><span class="topic-name">Law</span><div class="bar-track"><div class="bar-fill" data-width="40"></div></div><span class="topic-count">38</span></div>
+                            <div class="topic-bar"><span class="topic-name">Innovation</span><div class="bar-track"><div class="bar-fill" data-width="33"></div></div><span class="topic-count">32</span></div>
+                            <div class="topic-bar"><span class="topic-name">A.I.</span><div class="bar-track"><div class="bar-fill" data-width="25"></div></div><span class="topic-count">24</span></div>
+                        </div>
+                    </div>
+                    <div class="podcast-side" data-reveal>
+                        <img class="podcast-cover" src="assets/unsiloed-cover.jpg" alt="unSILOed podcast cover art" width="800" height="800" loading="lazy">
+                        <h3 class="sub-head">Notable guests — tap to listen</h3>
+                        <ul class="guest-list">
+                            <li><a href="https://www.unsiloedpodcast.com/episodes/jeff-immelt" target="_blank" rel="noopener"><strong>Jeff Immelt</strong><span>Former GE CEO, Stanford &nearr;</span></a></li>
+                            <li><a href="https://www.unsiloedpodcast.com/episodes/eric-ries" target="_blank" rel="noopener"><strong>Eric Ries</strong><span>Author, <em>The Lean Startup</em> &nearr;</span></a></li>
+                            <li><a href="https://www.unsiloedpodcast.com/episodes/gary-hamel" target="_blank" rel="noopener"><strong>Gary Hamel</strong><span>London Business School &nearr;</span></a></li>
+                            <li><a href="https://www.unsiloedpodcast.com/episodes/geoffrey-a-moore" target="_blank" rel="noopener"><strong>Geoffrey A. Moore</strong><span>Author, <em>Crossing the Chasm</em> &nearr;</span></a></li>
+                            <li><a href="https://www.unsiloedpodcast.com/episodes/barbara-kellerman" target="_blank" rel="noopener"><strong>Barbara Kellerman</strong><span>Harvard Kennedy School &nearr;</span></a></li>
+                            <li><a href="https://www.unsiloedpodcast.com/episodes/margaret-heffernan" target="_blank" rel="noopener"><strong>Margaret Heffernan</strong><span>University of Bath &nearr;</span></a></li>
+                        </ul>
+                        <h3 class="sub-head">Listen &amp; subscribe</h3>
+                        <div class="listen-links">
+                            <a class="listen-badge" href="https://podcasts.apple.com/us/podcast/unsiloed-with-greg-lablanc/id1566956045" target="_blank" rel="noopener">Apple Podcasts</a>
+                            <a class="listen-badge" href="https://open.spotify.com/show/5cSJgBrz0ZPs5BQZjQZBno" target="_blank" rel="noopener">Spotify</a>
+                            <a class="listen-badge" href="https://www.unsiloedpodcast.com/episodes" target="_blank" rel="noopener">All episodes</a>
+                        </div>
+                    </div>
+                </div>
                 <div class="reviews-grid">
-                    <blockquote class="review-card">
-                        &ldquo;One of the absolute best podcasts bringing findings from academia to the general public!&rdquo;
-                    </blockquote>
-                    <blockquote class="review-card">
-                        &ldquo;One of the greatest public goods &mdash; free knowledge, varying perspectives.&rdquo;
-                    </blockquote>
-                    <blockquote class="review-card">
-                        &ldquo;Greg reads a ton of books, he uses his skills and business insights as a biz school prof to dig deeper into the context of the authors.&rdquo;
-                    </blockquote>
+                    <blockquote class="review" data-reveal>&ldquo;One of the absolute best podcasts bringing findings from academia to the general public!&rdquo;</blockquote>
+                    <blockquote class="review" data-reveal>&ldquo;One of the greatest public goods — free knowledge, varying perspectives.&rdquo;</blockquote>
+                    <blockquote class="review" data-reveal>&ldquo;Greg reads a ton of books, and uses his insights as a business school professor to dig deeper into the context of the authors.&rdquo;</blockquote>
+                </div>
+                <div class="section-cta" data-reveal>
+                    <a href="#contact" class="btn btn-gold">Invite Greg on your podcast</a>
                 </div>
             </div>
-            <div class="podcast-listen">
-                <h3>Listen & Subscribe</h3>
-                <div class="listen-links">
-                    <a href="https://podcasts.apple.com/podcast/unsiloed" class="listen-badge" target="_blank" rel="noopener">Apple Podcasts</a>
-                    <a href="https://open.spotify.com/show/unsiloed" class="listen-badge" target="_blank" rel="noopener">Spotify</a>
-                    <a href="https://www.podcastaddict.com/podcast/unsiloed" class="listen-badge" target="_blank" rel="noopener">Podcast Addict</a>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- For Governments & Organizations -->
-    <section class="section section-dark" id="governments">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">For Governments & Organizations</h2>
-                <div class="section-line"></div>
-            </div>
-            <div class="gov-content">
-                <p class="gov-lead">As Academic Director of UC Berkeley's AMENA Center for Entrepreneurship and Development, Greg leads programs fostering innovation across Asia, the Middle East, and North Africa.</p>
-                <div class="gov-grid">
-                    <div class="gov-card">
-                        <h3>AMENA Center Programs</h3>
+        <!-- ============ GLOBAL ADVISORY ============ -->
+        <section class="section" id="global">
+            <div class="container">
+                <header class="section-head" data-reveal>
+                    <p class="eyebrow"><span class="eyebrow-num">06</span> Global Advisory</p>
+                    <h2 class="section-title">For governments &amp; organizations</h2>
+                    <p class="section-intro">From ministries to multinationals, Greg has taught and advised in over 30 countries — helping institutions build the capacity to adopt AI and emerging technology on their own terms.</p>
+                </header>
+                <div class="two-col-cards">
+                    <article class="list-card" data-reveal>
+                        <h3>Berkeley Engineering Professional Education</h3>
+                        <p class="list-card-text">As Faculty Director of Professional Education at UC Berkeley's College of Engineering, Greg shapes how one of the world's leading engineering schools teaches AI, data, and emerging technology to working professionals and technical leaders.</p>
                         <ul>
-                            <li>Startup acceleration and incubator programs for MENA startups</li>
-                            <li>10&ndash;20 week innovation immersion programs</li>
-                            <li>Certificate courses in workforce capacity, governance, and entrepreneurship</li>
-                            <li>Global exchange programs with for-credit UC Berkeley courses</li>
-                            <li>Partnership with World Innovations Network (WIN) aligned with UN SDGs</li>
+                            <li>Professional and executive programs in AI, data science, and emerging tech</li>
+                            <li>Bridging engineering depth with business strategy</li>
+                            <li>Custom cohorts for organizations building technical leadership</li>
                         </ul>
-                    </div>
-                    <div class="gov-card">
-                        <h3>Global Consulting Experience</h3>
+                        <a class="card-link" href="https://exec-ed.berkeley.edu/" target="_blank" rel="noopener">Explore Berkeley Engineering professional programs &nearr;</a>
+                    </article>
+                    <article class="list-card" data-reveal>
+                        <h3>Global consulting experience</h3>
                         <ul>
-                            <li>Advised executives at 100+ companies and governments worldwide</li>
-                            <li>Mastercard Digital Safari programs with bankers from Azerbaijan, Turkey, Egypt, Ghana, and Georgia</li>
-                            <li>Executive education at Moscow School of Management SKOLKOVO</li>
-                            <li>Custom digital transformation workshops for financial institutions</li>
-                            <li>Innovation, decision making, risk management, and strategy consulting</li>
+                            <li>Advisor to executives at 100+ companies and governments worldwide</li>
+                            <li>Executive programs with The Financial Academy of Saudi Arabia</li>
+                            <li>Advisory work with the CEO and senior executives of Kazakhtelecom</li>
+                            <li>Mastercard Digital Safari cohorts from Azerbaijan, Turkey, Egypt, Ghana, and Georgia</li>
+                            <li>Custom digital-transformation workshops for financial institutions</li>
+                            <li>Advisor to U.S. teachers' and public-employee pension funds</li>
+                        </ul>
+                    </article>
+                </div>
+                <figure class="pull-quote" data-reveal>
+                    <blockquote>Technology diffuses rapidly. What does not diffuse rapidly are managerial techniques and <em>organizational architecture.</em></blockquote>
+                </figure>
+                <div class="section-cta" data-reveal>
+                    <a href="#contact" class="btn btn-dark">Set up a meeting</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CREDENTIALS ============ -->
+        <section class="section section-tint" id="credentials">
+            <div class="container">
+                <header class="section-head" data-reveal>
+                    <p class="eyebrow"><span class="eyebrow-num">07</span> Credentials</p>
+                    <h2 class="section-title">Trained across the disciplines he teaches</h2>
+                </header>
+                <div class="cred-grid">
+                    <div class="cred-col" data-reveal>
+                        <h3 class="sub-head">Education</h3>
+                        <ul class="cred-list">
+                            <li><strong>BA — History, Politics, Philosophy &amp; Economics</strong><span>University of Pennsylvania · University Scholar</span></li>
+                            <li><strong>BS Economics — Business Administration</strong><span>The Wharton School · Mellon Fellow</span></li>
+                            <li><strong>ABD — Financial History</strong><span>University of Pennsylvania · Graduate Fellow</span></li>
+                            <li><strong>JD</strong><span>George Mason University School of Law · Robert Levy Fellow</span></li>
+                            <li><strong>LLM</strong><span>UC Berkeley School of Law · John Olin Fellow</span></li>
+                        </ul>
+                    </div>
+                    <div class="cred-col" data-reveal>
+                        <h3 class="sub-head">Awards &amp; honors</h3>
+                        <ul class="cred-list">
+                            <li><strong>Earl F. Cheit Award for Outstanding Teaching</strong><span>UC Berkeley Haas, 2009</span></li>
+                            <li><strong>Presidential Teaching Fellow</strong><span>UC Berkeley, 2009</span></li>
+                            <li><strong>EWMBA Core Instructor of the Year</strong><span>Berkeley Haas, 2004&ndash;05</span></li>
+                            <li><strong>John Olin Fellow</strong><span>Boalt Hall, UC Berkeley</span></li>
+                            <li><strong>Robert Levy Fellow in Law &amp; Economics</strong><span>George Mason University</span></li>
                         </ul>
                     </div>
                 </div>
-                <blockquote class="gov-quote">
-                    &ldquo;Technology diffuses rapidly. What does not diffuse rapidly are these managerial techniques, organizational architectural innovations.&rdquo;
-                </blockquote>
-            </div>
-        </div>
-    </section>
-
-    <!-- Credentials Section -->
-    <section class="section" id="credentials">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Credentials</h2>
-                <div class="section-line"></div>
-            </div>
-            <div class="credentials-content">
-                <div class="institutions-row">
-                    <div class="institution">UC Berkeley</div>
-                    <div class="institution">Stanford</div>
-                    <div class="institution">HEC Paris</div>
-                    <div class="institution">Wharton</div>
+                <h3 class="sub-head" data-reveal>Institutional roles</h3>
+                <div class="roles-grid" data-reveal>
+                    <div class="role"><strong>Faculty Director, Professional Education</strong><span>UC Berkeley College of Engineering</span></div>
+                    <div class="role"><strong>Lecturer</strong><span>UC Berkeley College of Engineering</span></div>
+                    <div class="role"><strong>Distinguished Teaching Fellow</strong><span>UC Berkeley Haas School of Business</span></div>
+                    <div class="role"><strong>Has taught at</strong><span>Stanford GSB &amp; HEC Paris</span></div>
+                    <div class="role"><strong>Advisor</strong><span>U.S. teachers' &amp; public-employee pension funds</span></div>
+                    <div class="role"><strong>Angel Investor &amp; AI Advisor</strong><span>Startups</span></div>
+                    <div class="role"><strong>Mentor Advisor</strong><span>Sutardja Center for Entrepreneurship &amp; Technology</span></div>
+                    <div class="role"><strong>Advisor</strong><span>Berkeley SkyDeck</span></div>
                 </div>
-                <div class="credentials-grid">
-                    <div class="credential-section">
-                        <h3>Education</h3>
-                        <ul class="credential-list">
-                            <li>
-                                <strong>BA, History, Politics, Philosophy & Economics</strong>
-                                <span>University of Pennsylvania &mdash; University Scholar</span>
-                            </li>
-                            <li>
-                                <strong>BS Economics (Business Administration)</strong>
-                                <span>Wharton School, University of Pennsylvania &mdash; Mellon Fellow</span>
-                            </li>
-                            <li>
-                                <strong>ABD, Financial History</strong>
-                                <span>University of Pennsylvania &mdash; Graduate Fellow</span>
-                            </li>
-                            <li>
-                                <strong>JD</strong>
-                                <span>George Mason University School of Law &mdash; Robert Levy Fellow</span>
-                            </li>
-                            <li>
-                                <strong>LLM</strong>
-                                <span>UC Berkeley School of Law (Boalt Hall) &mdash; John Olin Fellow</span>
-                            </li>
+            </div>
+        </section>
+
+        <!-- ============ MEDIA ============ -->
+        <section class="section" id="media">
+            <div class="container">
+                <header class="section-head" data-reveal>
+                    <p class="eyebrow"><span class="eyebrow-num">08</span> Media</p>
+                    <h2 class="section-title">In the press &amp; on the mic</h2>
+                </header>
+                <div class="media-grid">
+                    <div class="media-col" data-reveal>
+                        <h3 class="sub-head">Press &amp; publications</h3>
+                        <ul class="media-list">
+                            <li><a class="talk-link" href="https://english.ckgsb.edu.cn/knowledge/article/ai-system-implementation-key-strategies/" target="_blank" rel="noopener"><strong>CKGSB Knowledge</strong> — &ldquo;AI Strategies for Success: Insights from Gregory La Blanc&rdquo; &nearr;</a></li>
+                            <li><strong>&ldquo;In Praise of Irrational Investors&rdquo;</strong> (with Jeffrey Rachlinski), book chapter in <em>The Law and Economics of Irrational Behavior</em> (2005)</li>
                         </ul>
                     </div>
-                    <div class="credential-section">
-                        <h3>Awards & Honors</h3>
-                        <ul class="credential-list">
-                            <li>
-                                <strong>Earl F. Cheit Award for Outstanding Teaching</strong>
-                                <span>UC Berkeley Haas School of Business, 2009</span>
-                            </li>
-                            <li>
-                                <strong>UC Berkeley Presidential Teaching Fellow</strong>
-                                <span>2009</span>
-                            </li>
-                            <li>
-                                <strong>Haas EWMBA Core Graduate Instructor of the Year</strong>
-                                <span>2004&ndash;2005</span>
-                            </li>
-                            <li>
-                                <strong>John Olin Fellow</strong>
-                                <span>Boalt Hall, UC Berkeley, 2004&ndash;2005</span>
-                            </li>
-                            <li>
-                                <strong>Robert Levy Fellow in Law & Economics</strong>
-                                <span>George Mason University, 1996&ndash;1999</span>
-                            </li>
+                    <div class="media-col" data-reveal>
+                        <h3 class="sub-head">Guest appearances</h3>
+                        <ul class="media-list">
+                            <li><a class="talk-link" href="https://www.fastersmarter.io/87-know-what-youre-saying-how-communicating-tests-our-understanding/" target="_blank" rel="noopener"><strong>Think Fast, Talk Smart</strong> (Stanford GSB) — Ep. 87: &ldquo;How Communicating Tests Our Understanding&rdquo; &nearr;</a></li>
+                            <li><a class="talk-link" href="https://dobetter.esade.edu/en/gregory-lablanc-generative-AI" target="_blank" rel="noopener"><strong>Esade Do Better Talks</strong> — &ldquo;How Generative AI Is Changing the Business World&rdquo; &nearr;</a></li>
+                            <li><a class="talk-link" href="https://thesiliconvalleypodcast.com/009-the-future-of-banking-and-fintech-with-uc-berkeley-mba-professor-gregory-lablanc/" target="_blank" rel="noopener"><strong>The Silicon Valley Podcast</strong> — &ldquo;The Future of Banking and Fintech&rdquo; &nearr;</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="credential-section">
-                    <h3>Institutional Roles</h3>
-                    <div class="roles-grid">
-                        <div class="role-item">
-                            <strong>Distinguished Teaching Fellow</strong>
-                            <span>UC Berkeley Haas School of Business</span>
-                        </div>
-                        <div class="role-item">
-                            <strong>Lecturer</strong>
-                            <span>Stanford GSB, Stanford Engineering, Stanford Medicine</span>
-                        </div>
-                        <div class="role-item">
-                            <strong>Faculty Director</strong>
-                            <span>Berkeley Fintech Institute (Founder)</span>
-                        </div>
-                        <div class="role-item">
-                            <strong>Academic Director</strong>
-                            <span>AMENA Center for Entrepreneurship & Development</span>
-                        </div>
-                        <div class="role-item">
-                            <strong>Instructor</strong>
-                            <span>HEC Paris (Digital Transformation)</span>
-                        </div>
-                        <div class="role-item">
-                            <strong>Lecturer</strong>
-                            <span>UC Berkeley College of Engineering (EECS)</span>
-                        </div>
-                        <div class="role-item">
-                            <strong>Mentor Advisor</strong>
-                            <span>Sutardja Center for Entrepreneurship & Technology</span>
-                        </div>
-                        <div class="role-item">
-                            <strong>Advisor</strong>
-                            <span>SkyDeck Berkeley</span>
-                        </div>
+                <div class="watch-block" data-reveal>
+                    <h3 class="sub-head">Watch Greg in action</h3>
+                    <div class="video-grid">
+                        <button class="video-card" type="button" data-video="ii87DspA4wg" aria-label="Play: How Generative AI Is Changing the Business World">
+                            <img src="assets/video-esade.jpg" alt="" width="1120" height="630" loading="lazy">
+                            <span class="video-play" aria-hidden="true"></span>
+                            <span class="video-title">How Generative AI Is Changing the Business World<em>Esade Do Better Talks · 2024</em></span>
+                        </button>
+                        <button class="video-card" type="button" data-video="91rHUc_78NE" aria-label="Play: Navigating AI — The Power of Our Wishes">
+                            <img src="assets/video-unsiloed-661.jpg" alt="" width="1120" height="630" loading="lazy">
+                            <span class="video-play" aria-hidden="true"></span>
+                            <span class="video-title">Navigating AI: The Power of Our Wishes<em>unSILOed Ep. 661 · 2026</em></span>
+                        </button>
+                        <a class="video-card video-card-channel" href="https://www.youtube.com/@unsiloedpodcastwithgreglab2188/videos" target="_blank" rel="noopener">
+                            <img src="assets/video-channel.jpg" alt="unSILOed podcast on YouTube" width="1120" height="630" loading="lazy">
+                        </a>
                     </div>
                 </div>
+                <div class="section-cta" data-reveal>
+                    <a href="#contact" class="btn btn-dark">Media &amp; interview inquiries</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Media Section -->
-    <section class="section section-alt" id="media">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Media & Appearances</h2>
-                <div class="section-line"></div>
-            </div>
-            <div class="media-grid">
-                <div class="media-section">
-                    <h3>Press & Publications</h3>
-                    <ul class="media-list">
-                        <li><strong>CKGSB Knowledge</strong> (2024) &mdash; &ldquo;The AI Imperative: Gregory La Blanc on Data, Strategy, and Corporate Learning&rdquo;</li>
-                        <li><strong>Wired</strong> (2022) &mdash; Expert on crypto mining and power grid strain</li>
-                        <li><strong>Ars Technica</strong> (2022) &mdash; Crypto mining energy impact</li>
-                        <li><strong>Financial Times</strong> (2018) &mdash; Fintech coverage</li>
-                        <li><strong>Academic Publication</strong> &mdash; &ldquo;In Praise of Irrational Investors&rdquo; (with Jeffrey Rachlinski), in <em>The Law and Economics of Irrational Behavior</em>, ed. Vernon Smith, 2005</li>
-                    </ul>
-                </div>
-                <div class="media-section">
-                    <h3>Podcast Guest Appearances</h3>
-                    <ul class="media-list">
-                        <li><strong>Think Fast, Talk Smart</strong> (Stanford GSB) &mdash; &ldquo;How Communicating Tests Our Understanding&rdquo;</li>
-                        <li><strong>The Silicon Valley Podcast</strong> &mdash; &ldquo;Fintech, Banking, and the Future of MBA Programs&rdquo;</li>
-                        <li><strong>Wipro Lab45 Think Tank</strong> &mdash; &ldquo;Leading the AI Transformation of Your Company&rdquo;</li>
-                        <li><strong>Haas Podcasts</strong> &mdash; &ldquo;How Curiosity Created a Generalist&rdquo;</li>
-                        <li><strong>Esade Do Better Talks</strong> &mdash; Generative AI discussion</li>
-                    </ul>
-                </div>
-                <div class="media-section">
-                    <h3>Select Video Talks</h3>
-                    <ul class="media-list">
-                        <li>Managing Digital Transformation (2022)</li>
-                        <li>Business & Career Strategy in an Age of Disruption (2020)</li>
-                        <li>Smart Contracts and the Future of the Firm (2019)</li>
-                        <li>The FinTech Revolution (2018)</li>
-                        <li>How Big Data is Changing Business (and Our Lives) (2016)</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="section section-dark" id="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Book Greg</h2>
-                <div class="section-line"></div>
-            </div>
-            <div class="contact-content">
-                <p class="contact-intro">Interested in a speaking engagement, executive education program, or consulting partnership? Get in touch.</p>
-                <div class="contact-grid">
+        <!-- ============ CONTACT ============ -->
+        <section class="section section-dark contact" id="contact">
+            <div class="container">
+                <header class="section-head" data-reveal>
+                    <p class="eyebrow">Contact</p>
+                    <h2 class="section-title contact-title">Bring Greg to your<br><em>stage, boardroom, or program.</em></h2>
+                </header>
+                <div class="contact-grid" data-reveal>
                     <div class="contact-option">
-                        <h3>Speaking Engagements</h3>
-                        <p>Keynotes and workshops on AI strategy, digital transformation, fintech, innovation, and leadership for executive audiences worldwide.</p>
+                        <h3>Speaking</h3>
+                        <p>Keynotes and workshops on AI strategy, digital transformation, fintech, innovation, and leadership.</p>
                     </div>
                     <div class="contact-option">
-                        <h3>Executive Education</h3>
-                        <p>Custom corporate programs, digital transformation workshops, and Berkeley-based executive education experiences.</p>
+                        <h3>Executive education</h3>
+                        <p>Custom corporate programs and Berkeley-based executive education experiences.</p>
                     </div>
                     <div class="contact-option">
-                        <h3>Consulting & Advisory</h3>
-                        <p>Strategic advisory on innovation, data strategy, risk management, and organizational transformation for companies and governments.</p>
+                        <h3>Advisory</h3>
+                        <p>Strategy, data, risk, and organizational transformation — for companies and governments.</p>
                     </div>
                 </div>
-                <div class="contact-links">
-                    <h3>Connect</h3>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/lablanc" target="_blank" rel="noopener" class="social-link">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                            <span>LinkedIn</span>
-                        </a>
-                        <a href="https://twitter.com/glablanc" target="_blank" rel="noopener" class="social-link">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                            <span>X / Twitter</span>
-                        </a>
-                        <a href="https://twitter.com/UnsiloedPodcast" target="_blank" rel="noopener" class="social-link">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                            <span>@UnsiloedPodcast</span>
-                        </a>
-                        <a href="https://patreon.com/unsiloed" target="_blank" rel="noopener" class="social-link">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M15.386.524c-4.764 0-8.64 3.876-8.64 8.64 0 4.75 3.876 8.613 8.64 8.613 4.75 0 8.614-3.864 8.614-8.613C24 4.4 20.136.524 15.386.524zM.003 23.476h4.22V.524H.003z"/></svg>
-                            <span>Patreon</span>
-                        </a>
-                    </div>
+                <div class="contact-direct" data-reveal>
+                    <a class="btn btn-gold" href="mailto:glablanc@gmail.com">glablanc@gmail.com</a>
+                    <a class="btn btn-ghost contact-phone" href="tel:+12022584702">+1 (202) 258-4702</a>
+                </div>
+                <div class="social-row" data-reveal>
+                    <a href="https://www.linkedin.com/in/lablanc" target="_blank" rel="noopener" class="social-link">LinkedIn</a>
+                    <a href="https://twitter.com/glablanc" target="_blank" rel="noopener" class="social-link">X / Twitter</a>
+                    <a href="https://twitter.com/UnsiloedPodcast" target="_blank" rel="noopener" class="social-link">@UnsiloedPodcast</a>
+                    <a href="https://patreon.com/unsiloed" target="_blank" rel="noopener" class="social-link">Patreon</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2026 Gregory La Blanc. All rights reserved.</p>
-                <p class="footer-tagline">&ldquo;A specialist in being a generalist.&rdquo;</p>
-            </div>
+        <div class="container footer-inner">
+            <p>&copy; <span id="year">2026</span> Gregory La Blanc</p>
+            <p class="footer-tag">Turning technological change into organizational advantage.</p>
+            <a href="#top" class="footer-top">Back to top &uarr;</a>
         </div>
     </footer>
 

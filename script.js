@@ -1,97 +1,159 @@
-// Navigation scroll effect
+// Gregory La Blanc — site interactions
+
 const nav = document.getElementById('nav');
 const navToggle = document.getElementById('nav-toggle');
-const navLinks = document.getElementById('nav-links');
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        nav.classList.add('scrolled');
-    } else {
-        nav.classList.remove('scrolled');
-    }
-});
+// Nav background on scroll
+const updateNav = () => {
+    nav.classList.toggle('scrolled', window.scrollY > 24);
+};
+window.addEventListener('scroll', updateNav, { passive: true });
+updateNav();
 
-// Mobile menu toggle
-navToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
-
-// Close mobile menu on link click
-navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-    });
-});
-
-// Animate bar fills on scroll
-const observerOptions = {
-    threshold: 0.2,
-    rootMargin: '0px 0px -50px 0px'
+// Mobile menu
+const closeMenu = () => {
+    nav.classList.remove('menu-open');
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.setAttribute('aria-label', 'Open menu');
 };
 
-const barObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const bars = entry.target.querySelectorAll('.bar-fill');
-            bars.forEach((bar, i) => {
-                const width = bar.style.width;
-                bar.style.width = '0%';
-                setTimeout(() => {
-                    bar.style.width = width;
-                }, i * 80);
-            });
-            barObserver.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
+navToggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('menu-open');
+    navToggle.setAttribute('aria-expanded', String(open));
+    navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+});
 
-const topicBars = document.querySelector('.topic-bars');
-if (topicBars) {
-    barObserver.observe(topicBars);
+document.querySelectorAll('.mobile-menu a').forEach((link) => {
+    link.addEventListener('click', closeMenu);
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMenu();
+});
+
+// Reveal-on-scroll with a slight stagger for siblings entering together
+const revealEls = document.querySelectorAll('[data-reveal]');
+
+if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+    revealEls.forEach((el) => el.classList.add('is-visible'));
+} else {
+    let pending = [];
+    let flushScheduled = false;
+
+    const flush = () => {
+        pending.forEach((el, i) => {
+            el.style.setProperty('--reveal-delay', `${Math.min(i * 90, 450)}ms`);
+            el.classList.add('is-visible');
+        });
+        pending = [];
+        flushScheduled = false;
+    };
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            pending.push(entry.target);
+            revealObserver.unobserve(entry.target);
+        });
+        if (pending.length && !flushScheduled) {
+            flushScheduled = true;
+            requestAnimationFrame(flush);
+        }
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    revealEls.forEach((el) => revealObserver.observe(el));
 }
 
-// Fade-in animation for sections
-const fadeObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+// Animated stat counters
+const counters = document.querySelectorAll('[data-count]');
+
+const animateCounter = (el) => {
+    const target = parseInt(el.dataset.count, 10);
+    const suffix = el.dataset.suffix || '';
+    if (prefersReducedMotion) {
+        el.textContent = target + suffix;
+        return;
+    }
+    const duration = 1400;
+    const start = performance.now();
+    const tick = (now) => {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.round(target * eased) + (progress === 1 ? suffix : '');
+        if (progress < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+};
+
+const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            fadeObserver.unobserve(entry.target);
+            animateCounter(entry.target);
+            counterObserver.unobserve(entry.target);
         }
     });
-}, { threshold: 0.1 });
+}, { threshold: 0.6 });
 
-document.querySelectorAll('.section').forEach(section => {
-    section.classList.add('fade-in');
-    fadeObserver.observe(section);
+counters.forEach((el) => counterObserver.observe(el));
+
+// Podcast topic bars fill when scrolled into view
+const barsContainer = document.querySelector('.topic-bars');
+if (barsContainer) {
+    const fillBars = () => {
+        barsContainer.querySelectorAll('.bar-fill').forEach((bar, i) => {
+            setTimeout(() => {
+                bar.style.width = `${bar.dataset.width}%`;
+            }, prefersReducedMotion ? 0 : i * 70);
+        });
+    };
+    const barObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                fillBars();
+                barObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.3 });
+    barObserver.observe(barsContainer);
+}
+
+// Highlight the nav link for the section in view
+const sectionLinks = new Map();
+document.querySelectorAll('.nav-links a[href^="#"]').forEach((link) => {
+    const section = document.querySelector(link.getAttribute('href'));
+    if (section) sectionLinks.set(section, link);
 });
 
-// Add fade-in CSS dynamically
-const style = document.createElement('style');
-style.textContent = `
-    .fade-in {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .fade-in.visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-`;
-document.head.appendChild(style);
+if (sectionLinks.size) {
+    const activeObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            const link = sectionLinks.get(entry.target);
+            if (!link) return;
+            if (entry.isIntersecting) {
+                document.querySelectorAll('.nav-links a.active').forEach((a) => a.classList.remove('active'));
+                link.classList.add('active');
+            }
+        });
+    }, { rootMargin: '-40% 0px -55% 0px' });
 
-// Smooth scroll for anchor links (fallback for browsers without CSS smooth scroll)
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            e.preventDefault();
-            const navHeight = nav.offsetHeight;
-            const targetPosition = target.getBoundingClientRect().top + window.scrollY - navHeight;
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
-        }
-    });
+    sectionLinks.forEach((_, section) => activeObserver.observe(section));
+}
+
+// Click-to-play YouTube embeds (nothing loads from YouTube until tapped)
+document.querySelectorAll('.video-card[data-video]').forEach((card) => {
+    card.addEventListener('click', () => {
+        const id = card.dataset.video;
+        const iframe = document.createElement('iframe');
+        iframe.className = 'video-frame';
+        iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
+        iframe.title = card.getAttribute('aria-label') || 'Video';
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        iframe.allowFullscreen = true;
+        card.replaceChildren(iframe);
+    }, { once: true });
 });
+
+// Footer year
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
