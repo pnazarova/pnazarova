@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /drop/
+
+Sitemap: https://www.glablanc.com/sitemap.xml
