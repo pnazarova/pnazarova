@@ -140,6 +140,20 @@ if (sectionLinks.size) {
     sectionLinks.forEach((_, section) => activeObserver.observe(section));
 }
 
+// Click-to-play YouTube embeds (nothing loads from YouTube until tapped)
+document.querySelectorAll('.video-card[data-video]').forEach((card) => {
+    card.addEventListener('click', () => {
+        const id = card.dataset.video;
+        const iframe = document.createElement('iframe');
+        iframe.className = 'video-frame';
+        iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
+        iframe.title = card.getAttribute('aria-label') || 'Video';
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        iframe.allowFullscreen = true;
+        card.replaceChildren(iframe);
+    }, { once: true });
+});
+
 // Footer year
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
