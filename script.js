@@ -154,7 +154,9 @@ document.querySelectorAll('.video-card[data-video]').forEach((card) => {
     }, { once: true });
 });
 
-// Format chooser: recommend an offering and open a pre-filled email to Greg
+// Format chooser: recommend an offering and prepare a message the visitor
+// can send via Gmail, their mail app, or copy anywhere (mailto alone fails
+// silently on machines with no default mail client)
 const formatForm = document.getElementById('format-form');
 if (formatForm) {
     formatForm.addEventListener('submit', (e) => {
@@ -164,7 +166,6 @@ if (formatForm) {
         const note = document.getElementById('form-note');
         if (!v('name') || !v('email')) {
             note.textContent = 'Please add your name and email so Greg can reply.';
-            note.classList.remove('form-note-ok');
             return;
         }
         const time = v('time'), where = v('where'), audience = v('audience');
@@ -178,7 +179,7 @@ if (formatForm) {
             else if (where === 'Silicon Valley') rec = 'Silicon Valley Immersion';
             else rec = 'Executive Education Week, Custom Edition';
         }
-        const lines = [
+        const body = [
             `Name: ${v('name')}`,
             `Email: ${v('email')}`,
             `Organization & role: ${v('org')}`,
@@ -190,11 +191,34 @@ if (formatForm) {
             `Desired outcome: ${v('outcome')}`,
             '',
             `Suggested format from the site: ${rec}`
-        ];
+        ].join('\n');
         const subject = `Engagement inquiry from ${v('name')}${v('org') ? ' (' + v('org') + ')' : ''}`;
-        note.textContent = `Suggested format: ${rec}. Your email app should open now; if it doesn't, write to glablanc@gmail.com.`;
-        note.classList.add('form-note-ok');
-        window.location.href = `mailto:glablanc@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join('\n'))}`;
+
+        document.getElementById('form-rec').textContent = `Suggested format: ${rec}`;
+        document.getElementById('form-message').value = `To: glablanc@gmail.com\nSubject: ${subject}\n\n${body}`;
+        document.getElementById('gmail-link').href =
+            `https://mail.google.com/mail/?view=cm&fs=1&to=glablanc@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        document.getElementById('mailto-link').href =
+            `mailto:glablanc@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        const result = document.getElementById('form-result');
+        result.hidden = false;
+        note.textContent = 'Ready. Pick a button below to send it.';
+        result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+
+    document.getElementById('copy-btn').addEventListener('click', async () => {
+        const text = document.getElementById('form-message').value;
+        const btn = document.getElementById('copy-btn');
+        try {
+            await navigator.clipboard.writeText(text);
+            btn.textContent = 'Copied!';
+        } catch (err) {
+            const ta = document.getElementById('form-message');
+            ta.focus(); ta.select();
+            document.execCommand('copy');
+            btn.textContent = 'Copied!';
+        }
+        setTimeout(() => { btn.textContent = 'Copy message'; }, 2000);
     });
 }
 

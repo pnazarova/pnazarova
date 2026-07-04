@@ -380,7 +380,7 @@
                 <div class="chooser" id="find-your-format" data-reveal>
                     <div class="chooser-head">
                         <h3>Didn't find your format?</h3>
-                        <p>Answer a few questions. Your email app opens with everything written for you, and Greg replies with the right offer.</p>
+                        <p>Answer a few questions and get your message written for you. Send it with one click, and Greg replies with the right offer.</p>
                     </div>
                     <form id="format-form" class="format-form" novalidate>
                         <label>Name<input type="text" name="name" required autocomplete="name"></label>
@@ -417,10 +417,20 @@
                         <label>When, roughly?<input type="text" name="when" placeholder="e.g. Q1 2027"></label>
                         <label class="form-full">What outcome do you want?<textarea name="outcome" rows="2" placeholder="One or two sentences is plenty"></textarea></label>
                         <div class="form-actions form-full">
-                            <button type="submit" class="btn btn-gold">Send to Greg</button>
-                            <p class="form-note" id="form-note">This opens your email app with the message pre-filled for glablanc@gmail.com. Nothing is sent until you press send there.</p>
+                            <button type="submit" class="btn btn-gold">Prepare my message</button>
+                            <p class="form-note" id="form-note">Your message is prepared right here. Nothing is sent until you choose how to send it.</p>
                         </div>
                     </form>
+                    <div class="form-result form-full" id="form-result" hidden>
+                        <p class="form-rec" id="form-rec"></p>
+                        <textarea id="form-message" readonly rows="9" aria-label="Your prepared message"></textarea>
+                        <div class="form-result-actions">
+                            <a id="gmail-link" class="btn btn-gold" href="#" target="_blank" rel="noopener">Open in Gmail</a>
+                            <a id="mailto-link" class="btn btn-ghost" href="#">Open in email app</a>
+                            <button type="button" id="copy-btn" class="btn btn-ghost">Copy message</button>
+                        </div>
+                        <p class="form-note">Send it to <strong>glablanc@gmail.com</strong>, by email or WhatsApp (+1 202 258 4702).</p>
+                    </div>
                 </div>
             </div>
         </section>
