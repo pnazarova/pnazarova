@@ -200,10 +200,48 @@ if (formatForm) {
             `https://mail.google.com/mail/?view=cm&fs=1&to=glablanc@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         document.getElementById('mailto-link').href =
             `mailto:glablanc@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        const result = document.getElementById('form-result');
-        result.hidden = false;
-        note.textContent = 'Ready. Pick a button below to send it.';
-        result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+        // primary path: send silently via FormSubmit; fallback panel only if it fails
+        const btn = formatForm.querySelector('button[type=submit]');
+        btn.disabled = true;
+        const btnLabel = btn.textContent;
+        btn.textContent = 'Sending…';
+        fetch('https://formsubmit.co/ajax/glablanc@gmail.com', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify({
+                _subject: subject,
+                _template: 'table',
+                _honey: '',
+                name: v('name'),
+                email: v('email'),
+                organization: v('org'),
+                phone: v('phone'),
+                time: time,
+                location: where,
+                audience: `${audience} (approx. ${v('size') || '?'} people)`,
+                timeframe: v('when'),
+                outcome: v('outcome'),
+                suggested_format: rec
+            })
+        }).then((r) => r.json().then((d) => ({ ok: r.ok, d }))).then(({ ok, d }) => {
+            btn.disabled = false;
+            btn.textContent = btnLabel;
+            if (ok && String(d.success) === 'true') {
+                note.textContent = `Sent. Suggested format: ${rec}. Greg will reply to ${v('email')}.`;
+                note.classList.add('form-note-ok');
+                formatForm.reset();
+            } else {
+                throw new Error('formsubmit rejected');
+            }
+        }).catch(() => {
+            btn.disabled = false;
+            btn.textContent = btnLabel;
+            const result = document.getElementById('form-result');
+            result.hidden = false;
+            note.textContent = 'Direct sending is unavailable right now. Use a button below instead.';
+            result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
     });
 
     document.getElementById('copy-btn').addEventListener('click', async () => {
