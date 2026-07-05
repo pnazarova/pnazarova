@@ -838,6 +838,8 @@ a { color: inherit; text-decoration: none; }
 
 .form-note.form-note-ok { color: var(--gold-bright); font-weight: 600; }
 
+.form-result[hidden] { display: none; }
+
 .form-result {
     margin-top: 1.75rem;
     border-top: 1px solid rgba(233, 182, 57, 0.3);
