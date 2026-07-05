@@ -184,6 +184,7 @@ if (formatForm) {
             `Email: ${v('email')}`,
             `Organization & role: ${v('org')}`,
             `Phone / WhatsApp: ${v('phone')}`,
+            `LinkedIn: ${v('linkedin')}`,
             `Time available: ${time}`,
             `Location: ${where}`,
             `Audience: ${audience} (approx. ${v('size') || '?'} people)`,
@@ -217,6 +218,7 @@ if (formatForm) {
                 email: v('email'),
                 organization: v('org'),
                 phone: v('phone'),
+                linkedin: v('linkedin'),
                 time: time,
                 location: where,
                 audience: `${audience} (approx. ${v('size') || '?'} people)`,
@@ -283,6 +285,7 @@ if (contactForm) {
                 _honey: '',
                 name: v('name'),
                 reach_me_at: v('reach'),
+                linkedin: v('linkedin'),
                 message: v('message')
             })
         }).then((r) => r.json().then((d) => ({ ok: r.ok, d }))).then(({ ok, d }) => {
