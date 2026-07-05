@@ -1344,6 +1344,13 @@ a { color: inherit; text-decoration: none; }
 
 .card-link:hover { color: var(--gold); }
 
+.contact-form {
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+    max-width: 46rem;
+}
+
+.contact-form .sub-head { color: var(--gold-bright); margin-bottom: 0.5rem; }
+
 .contact-direct {
     display: flex;
     flex-wrap: wrap;
