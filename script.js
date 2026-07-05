@@ -183,7 +183,7 @@ if (formatForm) {
             `Name: ${v('name')}`,
             `Email: ${v('email')}`,
             `Organization & role: ${v('org')}`,
-            `Phone / WhatsApp: ${v('phone')}`,
+            `Phone / WhatsApp: ${v('phone') ? v('cc') + ' ' + v('phone') : ''}`,
             `LinkedIn: ${v('linkedin')}`,
             `Time available: ${time}`,
             `Location: ${where}`,
@@ -217,7 +217,7 @@ if (formatForm) {
                 name: v('name'),
                 email: v('email'),
                 organization: v('org'),
-                phone: v('phone'),
+                phone: v('phone') ? `${v('cc')} ${v('phone')}` : '',
                 linkedin: v('linkedin'),
                 time: time,
                 location: where,
@@ -270,8 +270,8 @@ if (contactForm) {
         const f = new FormData(contactForm);
         const v = (k) => (f.get(k) || '').toString().trim();
         const note = document.getElementById('contact-note');
-        if (!v('name') || !v('reach')) {
-            note.textContent = 'Please add your name and a way to reach you.';
+        if (!v('name') || !v('email')) {
+            note.textContent = 'Please add your name and email so Greg can reply.';
             return;
         }
         const btn = contactForm.querySelector('button[type=submit]');
@@ -284,7 +284,8 @@ if (contactForm) {
                 _template: 'table',
                 _honey: '',
                 name: v('name'),
-                reach_me_at: v('reach'),
+                email: v('email'),
+                phone: v('phone') ? `${v('cc')} ${v('phone')}` : '',
                 linkedin: v('linkedin'),
                 message: v('message')
             })
