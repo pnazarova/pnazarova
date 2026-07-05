@@ -260,6 +260,58 @@ if (formatForm) {
     });
 }
 
+// Contact mini-form: send via FormSubmit
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const f = new FormData(contactForm);
+        const v = (k) => (f.get(k) || '').toString().trim();
+        const note = document.getElementById('contact-note');
+        if (!v('name') || !v('reach')) {
+            note.textContent = 'Please add your name and a way to reach you.';
+            return;
+        }
+        const btn = contactForm.querySelector('button[type=submit]');
+        btn.disabled = true;
+        fetch('https://formsubmit.co/ajax/glablanc@gmail.com', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify({
+                _subject: `Contact request from ${v('name')}`,
+                _template: 'table',
+                _honey: '',
+                name: v('name'),
+                reach_me_at: v('reach'),
+                message: v('message')
+            })
+        }).then((r) => r.json().then((d) => ({ ok: r.ok, d }))).then(({ ok, d }) => {
+            btn.disabled = false;
+            if (ok && String(d.success) === 'true') {
+                note.textContent = `Sent. Greg will get in touch with you.`;
+                note.classList.add('form-note-ok');
+                contactForm.reset();
+            } else { throw new Error('rejected'); }
+        }).catch(() => {
+            btn.disabled = false;
+            note.textContent = 'Could not send right now. Email glablanc@gmail.com or call the number below.';
+        });
+    });
+}
+
+// Email button: also copy the address (mailto alone fails without a mail app)
+const emailBtn = document.getElementById('email-btn');
+if (emailBtn) {
+    emailBtn.addEventListener('click', () => {
+        const restore = emailBtn.textContent;
+        const done = () => {
+            emailBtn.textContent = 'Copied: glablanc@gmail.com';
+            setTimeout(() => { emailBtn.textContent = restore; }, 2000);
+        };
+        if (navigator.clipboard) navigator.clipboard.writeText('glablanc@gmail.com').then(done).catch(() => {});
+    });
+}
+
 // Footer year
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
