@@ -1,4 +1,4 @@
-// Gregory La Blanc — site interactions
+// Gregory La Blanc: site interactions
 
 const nav = document.getElementById('nav');
 const navToggle = document.getElementById('nav-toggle');
