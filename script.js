@@ -154,6 +154,10 @@ document.querySelectorAll('.video-card[data-video]').forEach((card) => {
     }, { once: true });
 });
 
+/* FORMAT CHOOSER, parked on purpose (owner request, July 2026). Do not delete.
+To bring the questionnaire back: unwrap this comment and restore the matching
+markup in index.html (search for FORMAT CHOOSER there).
+
 // Format chooser: recommend an offering and prepare a message the visitor
 // can send via Gmail, their mail app, or copy anywhere (mailto alone fails
 // silently on machines with no default mail client)
@@ -259,6 +263,48 @@ if (formatForm) {
             btn.textContent = 'Copied!';
         }
         setTimeout(() => { btn.textContent = 'Copy message'; }, 2000);
+    });
+}
+*/
+
+// Offerings: start-a-conversation form
+const talkForm = document.getElementById('talk-form');
+if (talkForm) {
+    talkForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const f = new FormData(talkForm);
+        const v = (k) => (f.get(k) || '').toString().trim();
+        const note = document.getElementById('talk-note');
+        if (!v('name') || !v('email')) {
+            note.textContent = 'Please add your name and email so Greg can reply.';
+            return;
+        }
+        const btn = talkForm.querySelector('button[type=submit]');
+        btn.disabled = true;
+        fetch('https://formsubmit.co/ajax/glablanc@gmail.com', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify({
+                _subject: `Engagement inquiry from ${v('name')}${v('org') ? ' (' + v('org') + ')' : ''}`,
+                _template: 'table',
+                _honey: '',
+                name: v('name'),
+                email: v('email'),
+                phone: v('phone') ? `${v('cc')} ${v('phone')}` : '',
+                organization: v('org'),
+                message: v('message')
+            })
+        }).then((r) => r.json().then((d) => ({ ok: r.ok, d }))).then(({ ok, d }) => {
+            btn.disabled = false;
+            if (ok && String(d.success) === 'true') {
+                note.textContent = 'Sent. Greg will get back to you personally.';
+                note.classList.add('form-note-ok');
+                talkForm.reset();
+            } else { throw new Error('rejected'); }
+        }).catch(() => {
+            btn.disabled = false;
+            note.textContent = 'Could not send right now. Email glablanc@gmail.com or use the form at the bottom of the page.';
+        });
     });
 }
 
