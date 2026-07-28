@@ -2,6 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script>
+        // Safety net: if a visitor lands on plain http, switch to https before anything renders.
+        // The authoritative fix is the "Enforce HTTPS" setting in GitHub Pages, which makes
+        // the server itself redirect. This only covers visitors whose browsers get that far.
+        if (location.protocol === 'http:' && location.hostname.indexOf('glablanc.com') !== -1) {
+            location.replace('https://' + location.host + location.pathname + location.search + location.hash);
+        }
+    </script>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gregory La Blanc | AI Transformation Speaker & UC Berkeley Executive Education</title>
     <meta name="description" content="Gregory La Blanc (Greg LaBlanc) helps companies master AI transformation. UC Berkeley executive education faculty director, AI keynote speaker in Silicon Valley and worldwide, host of the unSILOed podcast.">
@@ -98,6 +107,64 @@
             "https://podcasts.apple.com/us/podcast/unsiloed-with-greg-lablanc/id1566956045",
             "https://open.spotify.com/show/5cSJgBrz0ZPs5BQZjQZBno"
           ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://www.glablanc.com/#services",
+          "name": "Executive education, keynotes, and advisory with Gregory La Blanc",
+          "serviceType": "Executive education and keynote speaking",
+          "provider": { "@id": "https://www.glablanc.com/#greg" },
+          "areaServed": "Worldwide",
+          "audience": {
+            "@type": "BusinessAudience",
+            "name": "Executives, boards, government delegations, and corporate academies"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Ways to work with Greg",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Keynotes and Fireside Chats",
+                  "description": "A 45 to 90 minute talk giving executive audiences a working playbook on AI transformation, digital strategy, fintech, data-driven leadership, and innovation, tailored to their industry."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Moderator and Interviewer",
+                  "description": "Greg hosts panels, interviews CEOs, founders, and guest authors, drawing on more than 600 podcast interviews."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Executive Education Week",
+                  "description": "A five day program for a leadership cohort, delivered either on campus at UC Berkeley with a certificate, or designed and delivered independently anywhere in the world."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Silicon Valley Immersion",
+                  "description": "A five day access week in Silicon Valley with visits to tech companies and startups, meetings with VCs and founders, and evening debriefs turning what delegations see into strategy they can use at home."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Strategy Sprint",
+                  "description": "A one day working session with a leadership team on the forces reshaping their industry, run in Silicon Valley or brought to the client."
+                }
+              }
+            ]
+          }
         }
       ]
     }
