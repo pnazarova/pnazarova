@@ -1031,6 +1031,70 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* --------------------------------------------------------------------------
+   Client testimonials
+   -------------------------------------------------------------------------- */
+
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    gap: 1.5rem;
+    margin: clamp(2rem, 4vw, 3rem) 0 clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.testimonial {
+    background: var(--paper);
+    border: 1.5px solid var(--line-strong);
+    border-radius: var(--sketch);
+    padding: 1.8rem 1.6rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    position: relative;
+    transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+
+.testimonial:hover {
+    transform: translate(-1px, -3px) rotate(-0.3deg);
+    box-shadow: 6px 6px 0 rgba(10, 33, 74, 0.12);
+}
+
+.testimonial p {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    line-height: 1.5;
+    font-weight: 500;
+    margin: 0;
+    flex: 1;
+}
+
+.testimonial footer {
+    display: grid;
+    gap: 0.15rem;
+    padding-top: 0.9rem;
+    border-top: 1px solid var(--line);
+}
+
+.testimonial-name {
+    font-weight: 650;
+    font-size: 0.95rem;
+    color: var(--ink);
+}
+
+a.testimonial-name:hover,
+a.testimonial-name:focus-visible {
+    text-decoration: underline;
+    text-decoration-color: var(--gold);
+    text-underline-offset: 3px;
+    text-decoration-thickness: 2px;
+}
+
+.testimonial-role {
+    font-size: 0.85rem;
+    line-height: 1.45;
+    color: var(--ink-soft);
+}
+
+/* --------------------------------------------------------------------------
    Global advisory / credentials / media
    -------------------------------------------------------------------------- */
 
