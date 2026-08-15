@@ -1384,6 +1384,48 @@ a.testimonial-name:focus-visible {
     margin-top: clamp(2.25rem, 4vw, 3rem);
 }
 
+/* --------------------------------------------------------------------------
+   Support the work
+   -------------------------------------------------------------------------- */
+
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1.5rem;
+    margin-top: clamp(2rem, 4vw, 3rem);
+}
+
+.support-card {
+    background: var(--paper);
+    border: 1.5px solid var(--line-strong);
+    border-radius: var(--sketch);
+    padding: 1.9rem 1.7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.85rem;
+    scroll-margin-top: calc(var(--nav-h) + 24px);
+    transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+
+.support-card:hover {
+    transform: translate(-1px, -3px) rotate(-0.3deg);
+    box-shadow: 6px 6px 0 rgba(10, 33, 74, 0.12);
+}
+
+.support-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.support-card p {
+    color: var(--ink-soft);
+    font-size: 0.98rem;
+    flex: 1;
+}
+
 .section-dark .btn-ghost {
     border-color: var(--gold-bright);
     color: #fff;
