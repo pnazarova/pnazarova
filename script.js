@@ -97,27 +97,6 @@ const counterObserver = new IntersectionObserver((entries) => {
 
 counters.forEach((el) => counterObserver.observe(el));
 
-// Podcast topic bars fill when scrolled into view
-const barsContainer = document.querySelector('.topic-bars');
-if (barsContainer) {
-    const fillBars = () => {
-        barsContainer.querySelectorAll('.bar-fill').forEach((bar, i) => {
-            setTimeout(() => {
-                bar.style.width = `${bar.dataset.width}%`;
-            }, prefersReducedMotion ? 0 : i * 70);
-        });
-    };
-    const barObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                fillBars();
-                barObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.3 });
-    barObserver.observe(barsContainer);
-}
-
 // Highlight the nav link for the section in view
 const sectionLinks = new Map();
 document.querySelectorAll('.nav-links a[href^="#"]').forEach((link) => {
