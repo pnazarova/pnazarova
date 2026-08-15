@@ -1426,6 +1426,29 @@ a.testimonial-name:focus-visible {
     flex: 1;
 }
 
+/* the two routes that carry real money get the visual weight */
+.support-card-lead {
+    border-color: var(--ink);
+    box-shadow: 4px 4px 0 rgba(10, 33, 74, 0.14);
+}
+
+.support-card-lead h3 { font-size: 1.45rem; }
+
+.support-minor {
+    margin-top: clamp(1.5rem, 3vw, 2.25rem);
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+}
+
+.support-minor a {
+    color: var(--ink);
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: var(--gold);
+    text-underline-offset: 3px;
+    text-decoration-thickness: 2px;
+}
+
 .section-dark .btn-ghost {
     border-color: var(--gold-bright);
     color: #fff;
