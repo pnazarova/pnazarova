@@ -22,7 +22,11 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url || steps.deployment2.outputs.page_url || steps.deployment3.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/configure-pages@v5
+      # actions/configure-pages was removed on 2026-08-17. Its download from
+      # GitHub's CDN began returning 429 and 503, which killed the job during
+      # setup, before any step ran, so the retry logic below could not help.
+      # Nothing here used its outputs, and Pages is already enabled on the
+      # repo, so the step was doing no work for us.
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .
